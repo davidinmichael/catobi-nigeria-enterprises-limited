@@ -1,9 +1,10 @@
 /********** Template CSS **********/
 :root {
+    /* {% comment %} --primary: #AB7442; {% endcomment %} */
     --primary: #117554;
-    {% comment %} --primary: #AB7442; {% endcomment %}
     --light: #F5F5F5;
-    --dark: #353535;
+    /* --dark: #353535; */
+    --dark: #FF0000;
 }
 
 .fw-medium {
