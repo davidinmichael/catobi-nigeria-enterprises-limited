@@ -1,0 +1,84 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5">
+  <div class="container py-5">
+    <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+    <nav aria-label="breadcrumb animated slideInDown">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a class="text-white" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="text-white" href="{% url 'corporate' %}">About Us</a>
+        </li>
+        <li class="breadcrumb-item text-white active" aria-current="page">
+          Corporate Overview
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<!-- Page Header End -->
+
+{% include "partials/features.html" %}
+
+<!-- About Start -->
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+  <div class="container about px-lg-0">
+    <div class="row g-0 mx-lg-0">
+      <div class="col-lg-6 ps-lg-0" style="min-height: 400px">
+        <div class="position-relative h-100">
+          <img
+            class="position-absolute img-fluid w-100 h-100"
+            src="{% static 'img/about-01.jpg' %}"
+            style="object-fit: cover"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+        <div class="p-lg-5 pe-lg-0">
+          <div class="section-title text-start">
+            <h1 class="display-5 mb-4">Corporate Overview</h1>
+          </div>
+          <p class="mb-4 pb-2">
+            A company registered and incorporated in Nigeria with 100%
+            indigenous share holding of one million naira share capital,
+            registered under the law of federal republic of Nigeria as a private
+            limited liability company in a decentralize field of oil and gas
+            services, procurement, safety quality control, inspection,
+            Electrical and instrumentation system.
+          </p>
+          <p class="mb-4 pb-2">
+            CATOBI NIGERIA ENTERPRISE LIMITED is structured to provide world
+            class services to allied industries, Government entities including
+            Oil and Gas services up-stream and downstream sectors through the
+            provision of best practice of procurement, valves and flanges,
+            safety quality control, inspection, Electrical and Instrumentation
+            system.
+          </p>
+          <p class="mb-4 pb-2">
+            CATOBI NIGERIA ENTERPRISE LIMITED was incorporated on the 19th July
+            2007 and since then it has been consistence in providing quality and
+            safe services to its client.
+          </p>
+          <p class="mb-4 pb-2">
+            CATOBI NIGERIA ENTERPRISE LIMITED is a knowledge driven company with
+            assemblage of competent, dedicated and resourceful team of men and
+            women managing the company affairs with oil and gas services,
+            procurement of valves and flanges, safety quality control,
+            inspection, Electrical and instrumentation system. We apply our
+            knowledge, skills and experience to provide solutions and systems
+            that will optimize the safety and integrity of client resources
+            /facilities.
+          </p>
+       {% include "partials/happy_clients.html" %}
+          <a href="" class="btn btn-primary py-3 px-5">Explore More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About End -->
+{% endblock content %}
