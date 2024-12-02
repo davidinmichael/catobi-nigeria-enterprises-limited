@@ -1,0 +1,81 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5">
+  <div class="container py-5">
+    <h1 class="display-3 text-white mb-3 animated slideInDown">Training</h1>
+    <nav aria-label="breadcrumb animated slideInDown">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a class="text-white" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="text-white" href="{% url 'mission' %}">Our Services</a>
+        </li>
+        <li class="breadcrumb-item text-white active" aria-current="page">
+          Training
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Feature Start -->
+<div
+  class="container-fluid bg-light overflow-hidden px-lg-0"
+  style="margin: 6rem 0"
+>
+  <div class="container feature px-lg-0">
+    <div class="row g-0 mx-lg-0">
+      <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
+        <div class="p-lg-5 ps-lg-0">
+          <div class="section-title text-start">
+            <h1 class="display-5 mb-4">
+              World Class Training Services
+            </h1>
+          </div>
+          <p class="mb-4 pb-2">
+            Catobi Nigeria Enterprises Limited is in partnership with VALVE
+            INSTITUTE, Aberdeen, United Kingdom. The Valve Institute is renowned
+            in the oil industry for provision of expertise in valve technology
+            training, having over 30 years experience in this field, including
+            feasibility studies, concept selection, front end engineering
+            design, detail design and manufacture, system integration test
+            (SIT), installation, commissioning and field operations. Catobi
+            Nigeria Enterprises Limited established a Maintenance Training
+            School that is comprehensively equipped with state of the art
+            lecture facilities per class.
+          </p>
+          <p>
+            The Facility was commissioned by the Nigerian Content Development
+            and Monitoring Board (NCDMB) for the purpose of boosting local
+            participation in our area of expertise through the provision of both
+            theoretical and Hands-on training to Nigerian. CNEL is supported by
+            Oil and Gas Trainers Association of Nigeria (OGTAN) to provide
+            competency training to Engineers/Technicians who wish to take a
+            profession in this area of need and also to encourage a maintenance
+            culture and to provide consultancy services to IOC’s and EPC’s on
+            valve related issues. We also have affiliation with National
+            Business and Technical Examinations Board in providing Technical
+            Trainings.
+          </p>
+
+          {% include "partials/our-stats.html" %}
+        </div>
+      </div>
+      <div class="col-lg-6 pe-lg-0" style="min-height: 400px">
+        <div class="position-relative h-100">
+          <img
+            class="position-absolute img-fluid w-100 h-100"
+            src="{% static 'img/about-02.jpg' %}"
+            style="object-fit: cover"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Feature End -->
+{% include "partials/features.html" %} {% endblock content %}
