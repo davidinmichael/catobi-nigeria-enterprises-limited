@@ -1,0 +1,140 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5">
+  <div class="container py-5">
+    <h1 class="display-3 text-white mb-3 animated slideInDown">
+      Valve Procurement and Maintenance
+    </h1>
+    <nav aria-label="breadcrumb animated slideInDown">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a class="text-white" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="text-white" href="{% url 'mission' %}">Our Services</a>
+        </li>
+        <li class="breadcrumb-item text-white active" aria-current="page">
+          Valve Procurement and Maintenance
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Feature Start -->
+<div
+  class="container-fluid bg-light overflow-hidden px-lg-0"
+  style="margin: 6rem 0"
+>
+  <div class="container feature px-lg-0">
+    <div class="row g-0 mx-lg-0">
+      <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
+        <div class="p-lg-5 ps-lg-0">
+          <div class="section-title text-start">
+            <h1 class="display-5 mb-4">VALVES PROCUREMENT SERVICES</h1>
+          </div>
+          <p class="mb-4 pb-2">
+            Catobi has an Original Equipment Manufacturer partnership
+            relationship with the best Valve manufacturers in the world; HAWA
+            VALVES, INDIA(pvt) and ARGUS MACHINE COMPANY LIMITED, EDMONTON
+            CANADA in Africa. Catobi procures and supplies valves that are
+            tailored to fit our client’s scope as well as offer world class
+            after-sales support services to our customers. All valves within our
+            product range are Type Acceptance Tested and come with TAT
+            certificates. We procure and supply Ball Valves, Globe Valves, Gate
+            Valves, Check Valves, Butterfly Valves, Plug Valves, Instrument
+            (Block and Bleed) Valves etc of class 150#-2500# API 3000-15000,
+            material trim of Carbon Steel (CS) Stainless Steel (SS), Duplex
+            Stainless Steel (DSS), operators of lever, Gear box or Actuator.
+          </p>
+          {% include "partials/our-stats.html" %}
+        </div>
+      </div>
+      <div class="col-lg-6 pe-lg-0" style="min-height: 400px">
+        <div class="position-relative h-100">
+          <img
+            class="position-absolute img-fluid w-100 h-100"
+            src="{% static 'img/about-02.jpg' %}"
+            style="object-fit: cover"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container feature px-lg-0">
+    <div class="row g-0 mx-lg-0">
+      <div class="col-lg-6 pe-lg-0" style="min-height: 400px">
+        <div class="position-relative h-100">
+          <img
+            class="position-absolute img-fluid w-100 h-100"
+            src="{% static 'img/about-04.jpg' %}"
+            style="object-fit: cover"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
+        <div class="p-lg-5 ps-lg-0">
+          <div class="section-title text-start">
+            <h1 class="display-5 mb-4">VALVES MAINTENANCE SERVICES</h1>
+          </div>
+          <p class="mb-4 pb-2">
+            Catobi Valve maintenance facility is furnished with state of the art
+            equipment and dedicated/experienced valve specialists to provide
+            cost effective and reliable solutions to your entire valve.
+            malfunctions. We have the capacity and certifications to maintain
+            all kinds of valves (Ball Valves, Globe Valves, Check Valves, and
+            Butterfly Valves, Plug Valves, double Block and Bleed Valves e.t.c)
+            of any pressure class. Having the facility for disassembling and
+            Assembling of valves, we can repair valves.
+          </p>
+          <!-- {% include "partials/our-stats.html" %} -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container feature px-lg-0">
+    <div class="row g-0 mx-lg-0">
+      <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
+        <div class="p-lg-5 ps-lg-0">
+          <div class="section-title text-start">
+            <h1 class="display-5 mb-4">VALVE INTEGRITY/PRESSURE TEST</h1>
+          </div>
+          <p class="mb-4 pb-2">
+            Our Valve test benches have been designed and built to ensure
+            efficiency and maximum safety of the operator and supervising
+            engineer for Valve Pressure Testing and Integrity testing, Our
+            Mobile Testing Unit is available for field/site valves pressure
+            testing. These testing systems are capable of testing pressures 150#
+            – 2500#, API3000 –15000. We have the capacity and certification to
+            maintain all types of Valves (Ball Valves, Globe Valve, Gate Valves,
+            Check Valves, Butterfly Valves, Plug Valves, Safety Relief Valve,
+            Instrument (Block & Bleed) Valves, etc.) and of pressure class 150#
+            – 2500#. Having the facility for dis-assembling and assembling of
+            valves, we can repair valves non-critical parts and seals.
+            Calibration: We calibrate and certify all kind of Guages, Recorders
+            and Safety Relief valves etc. on a timely delivery.
+          </p>
+          <!-- {% include "partials/our-stats.html" %} -->
+        </div>
+      </div>
+      <div class="col-lg-6 pe-lg-0" style="min-height: 400px">
+        <div class="position-relative h-100">
+          <img
+            class="position-absolute img-fluid w-100 h-100"
+            src="{% static 'img/about-03.jpg' %}"
+            style="object-fit: cover"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Feature End -->
+{% include "partials/features.html" %} {% endblock content %}

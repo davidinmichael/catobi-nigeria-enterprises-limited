@@ -27,9 +27,13 @@
           >About Us</a
         >
         <div class="dropdown-menu fade-up m-0">
-          <a href="{% url 'corporate' %}" class="dropdown-item">Corporate Overview</a>
+          <a href="{% url 'corporate' %}" class="dropdown-item"
+            >Corporate Overview</a
+          >
           <a href="{% url 'mddesk' %}" class="dropdown-item">From MD’s Desk</a>
-          <a href="{% url 'mission' %}" class="dropdown-item">Mission & Vision</a>
+          <a href="{% url 'mission' %}" class="dropdown-item"
+            >Mission & Vision</a
+          >
           <a href="team.html" class="dropdown-item">Quality Policy</a>
           <a href="testimonial.html" class="dropdown-item">Certifications</a>
         </div>
@@ -39,12 +43,12 @@
           >Services</a
         >
         <div class="dropdown-menu fade-up m-0">
-          <a href="feature.html" class="dropdown-item"
+          <a href="{% url 'services' 'valve' %}" class="dropdown-item"
             >Valve Procurement and Maintenance</a
           >
-          <a href="quote.html" class="dropdown-item">Pipeline Services</a>
-          <a href="team.html" class="dropdown-item">Training Services</a>
-          <a href="testimonial.html" class="dropdown-item"
+          <a href="{% url 'services' 'pipeline' %}" class="dropdown-item">Pipeline Services</a>
+          <a href="{% url 'services' 'training' %}" class="dropdown-item">Training Services</a>
+          <a href="{% url 'services' 'freight' %}" class="dropdown-item"
             >Freight Forwarding Services</a
           >
         </div>
