@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5">
+  <div class="container py-5">
+    <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+    <nav aria-label="breadcrumb animated slideInDown">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a class="text-white" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="text-white" href="{% url 'mddesk' %}">About Us</a>
+        </li>
+        <li class="breadcrumb-item text-white active" aria-current="page">
+          From MD's Desk
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<!-- About Start -->
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+  <div class="container about px-lg-0">
+    <div class="row g-0 mx-lg-0">
+      <div class="col-lg-6 ps-lg-0" style="min-height: 400px">
+        <div class="position-relative h-100">
+          <img
+            class="position-absolute img-fluid w-100 h-100"
+            src="{% static 'img/md-catobi.jpg' %}"
+            style="object-fit: cover"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+        <div class="p-lg-5 pe-lg-0">
+          <div class="section-title text-start">
+            <h1 class="display-5 mb-4">From MD's Desk</h1>
+          </div>
+          <p class="mb-4 pb-2">
+            It is in the culture of Catobi Nigeria Enterprises Limited to
+            provide innovative and focused management with strategic principles
+            which makes for efciency and effectiveness in our service delivery
+            to our clients as we It is in the culture of Catobi Nigeria
+            Enterprises Limited to provide “know that customer satisfaction is
+            key to our development. Our ”Everybody’s business is my business”
+            principle encourages teamwork and collaborative attitude to the
+            achievement of set targets among our workforce.
+          </p>
+
+          {% include "partials/happy_clients.html" %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About End -->
+
+{% include "partials/features.html" %} {% endblock content %}
