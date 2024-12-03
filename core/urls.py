@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import (
-	Home, CorporateView, MDDesk, MissionVision, Services, Facilities
+	Home, CorporateView, MDDesk, MissionVision, Services, Facilities, Projects
 )
 
 
@@ -11,4 +11,5 @@ urlpatterns = [
 	path("mission/", MissionVision.as_view(), name="mission"),
 	path("services/<str:service>/", Services.as_view(), name="services"),
 	path("facility/<str:facility>/", Facilities.as_view(), name="facility"),
+	path("projects/", Projects.as_view(), name="projects"),
 ]

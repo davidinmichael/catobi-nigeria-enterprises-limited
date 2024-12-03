@@ -38,3 +38,8 @@ class Facilities(View):
 			return render(request, "core/testing_facility.html")
 		elif facility == "assembly":
 			return render(request, "core/valve_assembly.html")
+		
+
+class Projects(View):
+	def get(self, request):
+		return render(request, "core/our_projects.html")
