@@ -4,7 +4,7 @@
 <div class="container-fluid page-header py-5 mb-5">
   <div class="container py-5">
     <h1 class="display-3 text-white mb-3 animated slideInDown">
-      Testing Facility
+      Valve Assembly
     </h1>
     <nav aria-label="breadcrumb animated slideInDown">
       <ol class="breadcrumb">
@@ -15,7 +15,7 @@
           <a class="text-white" href="{% url 'mission' %}">Our Services</a>
         </li>
         <li class="breadcrumb-item text-white active" aria-current="page">
-          Testing Facility
+          Valve Assembly
         </li>
       </ol>
     </nav>
@@ -33,16 +33,39 @@
       <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
         <div class="p-lg-5 ps-lg-0">
           <div class="section-title text-start">
-            <h1 class="display-5 mb-4">Testing Facility</h1>
+            <h1 class="display-5 mb-4">Valve Assembly</h1>
           </div>
           <p class="mb-4 pb-2">
-            Our Test facility is a world class facility built to ensure
-            efficiency and maximum safety of the operator and supervising
-            engineer.
+            We do in-country assembly with qualified Engineers in partnership
+            with our OEM (HAWA VALVES), whereby components of the Valves are
+            shipped in parts and the final assembly and associated test is
+            carried out in our Nigeria Facility, we follow our quality procedure
+            to assure quality products for our Customers, we install operators,
+            such as gear box or actuator to valves.
+          </p>
+          <p class="mb-4 pb-2">
+            The essence is to minimize transit time required to ship the
+            operators to our parent factory before delivery to Nigeria. By this
+            process, delivery lead-time is minimized extensively.
           </p>
           {% include "partials/our-stats.html" %}
         </div>
       </div>
+      <div class="col-lg-6 pe-lg-0" style="min-height: 400px">
+        <div class="position-relative h-100">
+          <img
+            class="position-absolute img-fluid w-100 h-100"
+            src="{% static 'img/facility-06.jpg' %}"
+            style="object-fit: cover"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container feature px-lg-0">
+    <div class="row g-0 mx-lg-0">
       <div class="col-lg-6 pe-lg-0" style="min-height: 400px">
         <div class="position-relative h-100">
           <img
@@ -53,84 +76,23 @@
           />
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="container feature px-lg-0">
-    <div class="row g-0 mx-lg-0">
       <div class="col-lg-6 pe-lg-0" style="min-height: 400px">
         <div class="position-relative h-100">
           <img
             class="position-absolute img-fluid w-100 h-100"
-            src="{% static 'img/facility-01.jpg' %}"
+            src="{% static 'img/facility-04.jpg' %}"
             style="object-fit: cover"
             alt=""
           />
         </div>
       </div>
-      <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
-        <div class="p-lg-5 ps-lg-0">
-          <div class="section-title text-start">
-            <h1 class="display-5 mb-4">The Following Tests are Performed in Our Facility</h1>
-          </div>
-          <p class="mb-4 pb-2">
-            - Fugitive Emission Testing
-          </p>
-          <p class="mb-4 pb-2">
-            - High Pressure Gas Testing (N2)
-          </p>
-          <p class="mb-4 pb-2">
-            - Low Temperature Testing
-          </p>
-          <p class="mb-4 pb-2">
-            - Type-Acceptance Testing (TAT)
-          </p>
-          <p class="mb-4 pb-2">
-            - Cycle Testing
-          </p>
-          <p class="mb-4 pb-2">
-            - Vacuum Testing
-          </p>
-          <!-- {% include "partials/our-stats.html" %} -->
-        </div>
-      </div>
+      
     </div>
   </div>
 
   <div class="container feature px-lg-0">
     <div class="row g-0 mx-lg-0">
-      <!-- <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
-        <div class="p-lg-5 ps-lg-0">
-          <div class="section-title text-start">
-            <h1 class="display-5 mb-4">VALVE INTEGRITY/PRESSURE TEST</h1>
-          </div>
-          <p class="mb-4 pb-2">
-            Our Valve test benches have been designed and built to ensure
-            efficiency and maximum safety of the operator and supervising
-            engineer for Valve Pressure Testing and Integrity testing, Our
-            Mobile Testing Unit is available for field/site valves pressure
-            testing. These testing systems are capable of testing pressures 150#
-            – 2500#, API3000 –15000. We have the capacity and certification to
-            maintain all types of Valves (Ball Valves, Globe Valve, Gate Valves,
-            Check Valves, Butterfly Valves, Plug Valves, Safety Relief Valve,
-            Instrument (Block & Bleed) Valves, etc.) and of pressure class 150#
-            – 2500#. Having the facility for dis-assembling and assembling of
-            valves, we can repair valves non-critical parts and seals.
-            Calibration: We calibrate and certify all kind of Guages, Recorders
-            and Safety Relief valves etc. on a timely delivery.
-          </p>
-        </div>
-      </div> -->
-      <div class="col-lg-6 pe-lg-0" style="min-height: 400px">
-        <div class="position-relative h-100">
-          <img
-            class="position-absolute img-fluid w-100 h-100"
-            src="{% static 'img/facility-02.jpg' %}"
-            style="object-fit: cover"
-            alt=""
-          />
-        </div>
-      </div>
       <div class="col-lg-6 pe-lg-0" style="min-height: 400px">
         <div class="position-relative h-100">
           <img
@@ -145,7 +107,7 @@
         <div class="position-relative h-100">
           <img
             class="position-absolute img-fluid w-100 h-100"
-            src="{% static 'img/facility-04.jpg' %}"
+            src="{% static 'img/facility-02.jpg' %}"
             style="object-fit: cover"
             alt=""
           />
@@ -155,7 +117,17 @@
         <div class="position-relative h-100">
           <img
             class="position-absolute img-fluid w-100 h-100"
-            src="{% static 'img/facility-06.jpg' %}"
+            src="{% static 'img/facility-01.jpg' %}"
+            style="object-fit: cover"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="col-lg-6 pe-lg-0" style="min-height: 400px">
+        <div class="position-relative h-100">
+          <img
+            class="position-absolute img-fluid w-100 h-100"
+            src="{% static 'img/facility-07.jpg' %}"
             style="object-fit: cover"
             alt=""
           />
