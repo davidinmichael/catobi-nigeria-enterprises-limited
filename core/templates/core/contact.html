@@ -38,7 +38,8 @@
             services tailored to the rigorous demands of the oil and gas
             industry.
           </p>
-          <form>
+          <form action="{% url 'contact' %}" method="post">
+            {% csrf_token %}
             <div class="row g-3">
               <div class="col-md-6">
                 <div class="form-floating">

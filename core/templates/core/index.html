@@ -232,7 +232,8 @@
                             <h1 class="display-5 mb-4">Request for a Quote</h1>
                         </div>
                         <p class="mb-4 pb-2">Catobi Nigeria Enterprises, an ISO 9001 certified company, specializes in providing critical pressure testing and calibration services tailored to the rigorous demands of the oil and gas industry.</p>
-                        <form>
+                        <form action="{% url 'home' %}" method="post">
+                            {% csrf_token %}
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
                                     <input type="text" name="name" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
@@ -244,7 +245,7 @@
                                     <input type="text" name="phone" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;">
+                                    <select class="form-select border-0" name="service" style="height: 55px;">
                                         <option selected>Select A Service</option>
                                         <option value="freight">Freight Forwarding</option>
                                         <option value="valve_maintenance">Valve Testing and Maintenance</option>

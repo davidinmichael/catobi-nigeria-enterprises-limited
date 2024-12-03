@@ -1,10 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.views import View
+
+from .forms import ContactForm, QuoteForm
+from .models import Contact, Quote
 
 
 
 class Home(View):
 	def get(self, request):
+		return render(request, "core/index.html")
+	
+	def post(self, request):
+		form = QuoteForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect("home")
 		return render(request, "core/index.html")
 
 
@@ -45,6 +55,22 @@ class Projects(View):
 		return render(request, "core/our_projects.html")
 	
 
-class Contact(View):
+class ContactUs(View):
 	def get(self, request):
 		return render(request, "core/contact.html")
+	
+	def post(self, request):
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect("home")
+		return render(request, "core/contact.html")
+
+
+class QuotesContacts(View):
+	def get(self, request):
+		quotes = Quote.objects.all()
+		contacts = Contact.objects.all()
+		print("Quotes", quotes)
+		print("Contacts", contacts)
+		return render(request, "core/index.html")
