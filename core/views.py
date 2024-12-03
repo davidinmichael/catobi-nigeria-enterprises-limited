@@ -31,3 +31,10 @@ class Services(View):
 			return render(request, "core/training.html")
 		elif service == "freight":
 			return render(request, "core/freight.html")
+
+class Facilities(View):
+	def get(self, request, facility):
+		if facility == "testing":
+			return render(request, "core/testing_facility.html")
+		elif facility == "assembly":
+			return render(request, "core/valve_assembly.html")
