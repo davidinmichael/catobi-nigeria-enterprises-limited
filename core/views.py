@@ -43,3 +43,8 @@ class Facilities(View):
 class Projects(View):
 	def get(self, request):
 		return render(request, "core/our_projects.html")
+	
+
+class Contact(View):
+	def get(self, request):
+		return render(request, "core/contact.html")
