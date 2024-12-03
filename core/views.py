@@ -67,6 +67,10 @@ class ContactUs(View):
 		return render(request, "core/contact.html")
 
 
+class RequestQuote(View):
+	def get(self, request):
+		return render(request, "core/request_quote.html")
+
 class QuotesContacts(View):
 	def get(self, request):
 		quotes = Quote.objects.all()
