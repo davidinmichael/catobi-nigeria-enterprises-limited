@@ -1,8 +1,8 @@
 from django.shortcuts import redirect, render
 from django.views import View
 
-from .forms import ContactForm, QuoteForm
-from .models import Contact, Quote
+from .forms import ContactForm, QuoteForm, NewsLetterForm
+from .models import Contact, Quote, NewsLetter
 
 
 
@@ -11,7 +11,7 @@ class Home(View):
 		return render(request, "core/index.html")
 	
 	def post(self, request):
-		form = QuoteForm(request.POST)
+		form = NewsLetterForm(request.POST)
 		if form.is_valid():
 			form.save()
 			return redirect("home")
@@ -70,6 +70,13 @@ class ContactUs(View):
 class RequestQuote(View):
 	def get(self, request):
 		return render(request, "core/request_quote.html")
+	
+	def post(self, request):
+		form = QuoteForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect("home")
+		return render(request, "core/index.html")
 
 class QuotesContacts(View):
 	def get(self, request):

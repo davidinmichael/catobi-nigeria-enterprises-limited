@@ -30,3 +30,10 @@ class Quote(models.Model):
 
 	def __str__(self):
 		return f"{self.name} | {self.service}"
+
+
+class NewsLetter(models.Model):
+	email = models.EmailField()
+
+	def __str__(self):
+		return self.email
