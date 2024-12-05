@@ -16,5 +16,4 @@ urlpatterns = [
 	path("contact-us/", ContactUs.as_view(), name="contact"),
 	path("request-a-quote/", RequestQuote.as_view(), name="quote"),
 	path("leads/", QuotesContacts.as_view(), name="leads"),
-	path('test/', lambda request: HttpResponse('Test Page Works!')),
 ]
