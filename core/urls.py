@@ -1,4 +1,5 @@
 from django.urls import path
+from django.http import HttpResponse
 from .views import (
 	Home, CorporateView, MDDesk, MissionVision, Services, Facilities, Projects, ContactUs, QuotesContacts, RequestQuote
 )
@@ -15,4 +16,5 @@ urlpatterns = [
 	path("contact-us/", ContactUs.as_view(), name="contact"),
 	path("request-a-quote/", RequestQuote.as_view(), name="quote"),
 	path("leads/", QuotesContacts.as_view(), name="leads"),
+	path('test/', lambda request: HttpResponse('Test Page Works!')),
 ]
