@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% load static %} {% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/sandblast.css' %}" />
+{% endblock stylesheet %} {% block content %}
+<div class="product-container">
+  <div class="sandblast-contents">
+    <div class="sandblast-img">
+      <img src="{% static 'img/products/sandblast-01.jpeg' %}" alt="" />
+    </div>
+    <div class="sandblast-texts">
+      <div class="title">
+        <h1>Sandblasting Machine</h1>
+        <p>
+          It removes rust, old paint, scale, grease, and surface contaminants,
+          leaving the material smooth, roughened, or profiled depending on the
+          purpose. Sandblasting is essential for industrial maintenance, surface
+          preparation before coating, metal fabrication, and restoring aging
+          structures like pipelines, tanks, bridges, and machinery.
+        </p>
+      </div>
+      <div class="product-info">
+        <h2>Equipment Info</h2>
+        <p><span>Capacity:</span> 12000mAH</p>
+        <p><span>Size:</span> 12000mAH</p>
+        <p><span>Weight:</span> 12000mAH</p>
+      </div>
+      <div class="btn-group">
+        <a
+          href="{% url 'services' 'training' %}"
+          class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+          >Contact</a
+        >
+        <a
+          href="{% url 'quote' %}"
+          class="btn btn-light py-md-3 px-md-5 animated slideInRight"
+          >Request Quote</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

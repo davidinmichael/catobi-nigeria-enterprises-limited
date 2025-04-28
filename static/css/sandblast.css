@@ -1,0 +1,29 @@
+.sandblast-contents {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sandblast-img img {
+  width: 100%;
+}
+
+.sandblast-texts {
+  padding: 10px;
+}
+
+@media screen and (min-width: 888px) {
+  .sandblast-contents {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .sandblast-img,
+  .sandblast-texts {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .sandblast-img img {
+    border-radius: 10px;
+  }
+}
