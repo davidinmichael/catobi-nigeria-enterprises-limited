@@ -32,7 +32,7 @@
       </div>
       <div class="btn-group">
         <a
-          href="{% url 'services' 'training' %}"
+          href="{% url 'contact' %}"
           class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
           >Contact</a
         >
@@ -46,8 +46,22 @@
   </div>
   <div class="product-gallery">
     <h2>Equipment Photos</h2>
-    <div class="product-img">
-        <img src="{% static 'img/products/sandblast-02.jpeg' %}" alt="">
+    <div class="product-img owl-carousel header-carousel position-relative">
+      <img
+        class="owl-carousel-item"
+        src="{% static 'img/products/sandblast-02.jpeg' %}"
+        alt=""
+      />
+      <img
+        class="owl-carousel-item"
+        src="{% static 'img/products/sandblast-03.jpeg' %}"
+        alt=""
+      />
+      <img
+        class="owl-carousel-item"
+        src="{% static 'img/products/sandblast-04.jpeg' %}"
+        alt=""
+      />
     </div>
   </div>
 </div>
