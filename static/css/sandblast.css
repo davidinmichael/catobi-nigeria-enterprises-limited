@@ -10,6 +10,15 @@
   padding: 10px;
 }
 
+.product-info p:first-child {
+  font-weight: 600;
+}
+
+.sandblast-benefit {
+  background-color: aliceblue;
+  padding: 10px;
+}
+
 @media screen and (min-width: 888px) {
   .sandblast-contents {
     display: flex;
