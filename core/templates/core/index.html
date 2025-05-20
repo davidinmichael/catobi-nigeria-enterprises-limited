@@ -1,10 +1,7 @@
-{% extends "base.html" %} {% load static %}
-{% block content %}
-{% include "partials/top_bar.html" %}
+{% extends "base.html" %} {% load static %} {% block content %} {% include "partials/top_bar.html" %}
 <!-- Carousel Start -->
 <div class="container-fluid p-0 pb-5">
   <div class="owl-carousel header-carousel position-relative">
-
     <div class="owl-carousel-item position-relative">
       <img
         class="img-fluid"
@@ -64,9 +61,9 @@
                 Optimal Freight Forwarding & Logistics Services Across the Globe
               </h1>
               <p class="fs-5 fw-medium text-white mb-4 pb-2">
-                We offer comprehensive freight forwarding, logistics and transportation services,
-                including Custom Clearance, Air Freight, Sea Freight and inter-modal
-                transportation.
+                We offer comprehensive freight forwarding, logistics and
+                transportation services, including Custom Clearance, Air
+                Freight, Sea Freight and inter-modal transportation.
               </p>
               <a
                 href="{% url 'services' 'freight' %}"
@@ -83,7 +80,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="owl-carousel-item position-relative">
       <img
         class="img-fluid"
@@ -124,43 +121,45 @@
     </div>
 
     <div class="owl-carousel-item position-relative">
-        <img
-          class="img-fluid"
-          src="{% static 'img/header-01.jpg' %}"
-          alt="Catobi Equipment Hiring"
-        />
-        <div
-          class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-          style="background: rgba(53, 53, 53, 0.7)"
-        >
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-12 col-lg-8 text-center">
-                <h5 class="text-white text-uppercase mb-3 animated slideInDown">
-                  Catobi Equipment Hire
-                </h5>
-                <h1 class="display-3 text-white animated slideInDown mb-4">
-                  Reliable Equipment Hiring Services for Every Project
-                </h1>
-                <p class="fs-5 fw-medium text-white mb-4 pb-2">
-                  From construction to logistics, we provide well-maintained equipment ready to meet your project needs. Flexible hire terms, professional support, and timely delivery—Catobi has you covered.
-                </p>
-                <a
-                  href="{% url 'services' 'equipment-hire' %}"
-                  class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-                  >Explore Services</a
-                >
-                <a
-                  href="{% url 'quote' %}"
-                  class="btn btn-light py-md-3 px-md-5 animated slideInRight"
-                  >Get a Quote</a
-                >
-              </div>
+      <img
+        class="img-fluid"
+        src="{% static 'img/header-01.jpg' %}"
+        alt="Catobi Equipment Hiring"
+      />
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+        style="background: rgba(53, 53, 53, 0.7)"
+      >
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-8 text-center">
+              <h5 class="text-white text-uppercase mb-3 animated slideInDown">
+                Catobi Equipment Hire
+              </h5>
+              <h1 class="display-3 text-white animated slideInDown mb-4">
+                Reliable Equipment Hiring Services for Every Project
+              </h1>
+              <p class="fs-5 fw-medium text-white mb-4 pb-2">
+                From construction to logistics, we provide well-maintained
+                equipment ready to meet your project needs. Flexible hire terms,
+                professional support, and timely delivery—Catobi has you
+                covered.
+              </p>
+              <a
+                href="{% url 'services' 'equipment-hire' %}"
+                class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                >Explore Services</a
+              >
+              <a
+                href="{% url 'quote' %}"
+                class="btn btn-light py-md-3 px-md-5 animated slideInRight"
+                >Get a Quote</a
+              >
             </div>
           </div>
         </div>
       </div>
-      
+    </div>
 
     <div class="owl-carousel-item position-relative">
       <img
@@ -200,7 +199,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
 <!-- Carousel End -->
@@ -264,12 +262,12 @@
           <div
             class="p-4 text-center border border-5 border-light border-top-0"
           >
-            <h4 class="mb-3">Valve Assembly & Maintenance</h4>
+            <h4 class="mb-3">General Engineering Services</h4>
             <p>
-              With over a decade of experience, we are your trusted source for
-              high-quality valves. Our commitment to excellence ensures optimal
-              performance and longevity for your operations. Trust us to deliver
-              the right valve solution, every time.
+              General engineering services covering; Design Engineering,
+              Structural, Piping, Mechanical, Civil and Electrical Engineering,
+              Instrumentation and Control Systems, Constructions and
+              Supervision, Commissioning and Relevant Documentations
             </p>
             <a class="fw-medium" href="{% url 'services' 'valve' %}"
               >Read More<i class="fa fa-arrow-right ms-2"></i
@@ -282,19 +280,43 @@
           <div class="overflow-hidden">
             <img
               class="img-fluid"
-              src="{% static 'img/services/services-05.jpg' %}"
+              src="{% static 'img/services/services-08.png' %}"
+              alt="Rig Refurbishment"
+            />
+          </div>
+          <div
+            class="p-4 text-center border border-5 border-light border-top-0"
+          >
+            <h4 class="mb-3">Rig Refurbishment & Life Extension Services</h4>
+            <p>
+              Specialized refurbishment and upgrade services for drilling and
+              production rigs — including structural repairs, systems overhauls,
+              modernization, and compliance alignment to extend asset life and
+              enhance productivity.
+            </p>
+            <a class="fw-medium" href="{% url 'services' 'pipeline' %}"
+              >Read More<i class="fa fa-arrow-right ms-2"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="service-item">
+          <div class="overflow-hidden">
+            <img
+              class="img-fluid"
+              src="{% static 'img/services/services-05.png' %}"
               alt="Pipeline Intervention"
             />
           </div>
           <div
             class="p-4 text-center border border-5 border-light border-top-0"
           >
-            <h4 class="mb-3">Pipeline Intervention</h4>
+            <h4 class="mb-3">Pipeline Solutions & Intervention Services</h4>
             <p>
-              Our expertise includes Hot Tapping and Line Stopping solutions,
-              Flange Facing services, Pipe Cutting and Beveling, Pipe Freezing
-              and Leak Sealing tailored for oil and gas, utilities, and chilled
-              water networks.
+              Comprehensive pipeline support including inspection, cleaning,
+              pigging, pressure testing, leak repair, and emergency intervention
+              to ensure safe, uninterrupted flow and reduce system downtime.
             </p>
             <a class="fw-medium" href="{% url 'services' 'pipeline' %}"
               >Read More<i class="fa fa-arrow-right ms-2"></i
@@ -314,11 +336,11 @@
           <div
             class="p-4 text-center border border-5 border-light border-top-0"
           >
-            <h4 class="mb-3">Freight Forwarding</h4>
+            <h4 class="mb-3">Integrated Logistics & Freight Management</h4>
             <p>
-              Catobi Freight Forwarding offers comprehensive logistics and
-              transportation services, including air freight, sea freight, and
-              inter-modal transportation.
+              Scalable logistics and supply chain solutions — from warehousing
+              to last-mile delivery — designed to meet the demands of complex
+              industrial operations and minimize transit risks and delays.
             </p>
             <a class="fw-medium" href="{% url 'services' 'freight' %}"
               >Read More<i class="fa fa-arrow-right ms-2"></i
@@ -356,18 +378,60 @@
           <div class="overflow-hidden">
             <img
               class="img-fluid"
-              src="{% static 'img/services/services-02.jpg' %}"
+              src="{% static 'img/services/services-09.png' %}"
               alt="Flange Management"
             />
           </div>
           <div
             class="p-4 text-center border border-5 border-light border-top-0"
           >
-            <h4 class="mb-3">Flange Management</h4>
+            <h4 class="mb-3">Flange Management Services</h4>
             <p>
-              We offer comprehensive flange management solutions. Our expertise
-              ensures the integrity and reliability of your flange connections,
-              minimizing downtime and maximizing efficiency.
+              Complete flange integrity solutions covering bolting, torque/tensioning, leak detection, and controlled joint assembly to prevent leaks and maintain system pressure during operations and shutdowns
+            </p>
+            <a class="fw-medium" href="{% url 'services' 'valve' %}"
+              >Read More<i class="fa fa-arrow-right ms-2"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="service-item">
+          <div class="overflow-hidden">
+            <img
+              class="img-fluid"
+              src="{% static 'img/services/services-02.png' %}"
+              alt="Valve Maintenance"
+            />
+          </div>
+          <div
+            class="p-4 text-center border border-5 border-light border-top-0"
+          >
+            <h4 class="mb-3">Valve Solutions – Assembly, Maintenance & Supply</h4>
+            <p>
+              End-to-end services for industrial valves, including precision assembly, preventive and corrective maintenance, and reliable sourcing of top-quality valves to ensure system integrity and operational safety.
+            </p>
+            <a class="fw-medium" href="{% url 'services' 'valve' %}"
+              >Read More<i class="fa fa-arrow-right ms-2"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="service-item">
+          <div class="overflow-hidden">
+            <img
+              class="img-fluid"
+              src="{% static 'img/services/services-07.png' %}"
+              alt="General Procurement"
+            />
+          </div>
+          <div
+            class="p-4 text-center border border-5 border-light border-top-0"
+          >
+            <h4 class="mb-3">General Procurement & Supply Services</h4>
+            <p>
+              Efficient sourcing and supply of industrial tools, spare parts, and equipment from verified vendors, ensuring cost-effective procurement without compromising on quality or delivery timelines.
             </p>
             <a class="fw-medium" href="{% url 'services' 'valve' %}"
               >Read More<i class="fa fa-arrow-right ms-2"></i
@@ -380,19 +444,16 @@
           <div class="overflow-hidden">
             <img
               class="img-fluid"
-              src="{% static 'img/services/services-01.jpg' %}"
+              src="{% static 'img/services/services-01.png' %}"
               alt="Catobi Training"
             />
           </div>
           <div
             class="p-4 text-center border border-5 border-light border-top-0"
           >
-            <h4 class="mb-3">Training</h4>
+            <h4 class="mb-3">Technical Training & Workforce Development</h4>
             <p>
-              Catobi Nigeria Enterprises Limited, backed by the Nigerian Content
-              Development and Monitoring Board (NCDMB), Maintenance Training
-              School offers theoretical and hands-on training to enhance local
-              participation.
+              Customized training programs focused on industry-specific competencies in maintenance, safety, operations, and inspection — ensuring your workforce remains skilled, compliant, and operationally ready.
             </p>
             <a class="fw-medium" href="{% url 'services' 'training' %}"
               >Read More<i class="fa fa-arrow-right ms-2"></i
@@ -437,6 +498,4 @@
 </div>
 <!-- Feature End -->
 
-{% include "partials/projects.html" %}
-{% include "partials/quote.html" %}
-{% endblock content %}
+{% include "partials/projects.html" %} {% include "partials/quote.html" %} {% endblock content %}
