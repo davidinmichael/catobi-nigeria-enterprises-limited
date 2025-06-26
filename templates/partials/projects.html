@@ -1,158 +1,251 @@
 {% load static %}
-    <!-- Projects Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Our Projects</h1>
-            </div>
-            <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="col-12 text-center">
-                    <ul class="list-inline mb-5" id="portfolio-flters">
-                        <li class="mx-2 active" data-filter="*">All</li>
-                        <li class="mx-2" data-filter=".first">Valve Procurement</li>
-                        <li class="mx-2" data-filter=".second">Freight Forwarding</li>
-                        <li class="mx-2" data-filter=".third">Valve Maintenance</li>
-                        <li class="mx-2" data-filter=".fourth">Prefessional Training</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row g-4 portfolio-container">
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{% static 'img/portfolio-1.jpg' %}" alt="Catobi Completed Project">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{% static 'img/portfolio-1.jpg' %}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Valve Procurement</p>
-                            <h5 class="lh-base mb-0">Kwale Gas Plant Flare Down</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{% static 'img/portfolio-2.jpg' %}" alt="Catobi Completed Project">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{% static 'img/portfolio-2.jpg' %}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Freight Forwarding</p>
-                            <h5 class="lh-base mb-0">Freight Forwarding and Important Clearance</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item fourth wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{% static 'img/portfolio-3.jpg' %}" alt="Catobi Completed Project">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{% static 'img/portfolio-3.jpg' %}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Professional Training</p>
-                            <h5 class="lh-base mb-0">HSE Professional Training</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item third wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{% static 'img/portfolio-2.jpg' %}" alt="Catobi Completed Project">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{% static 'img/portfolio-2.jpg' %}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Valve Maintenance</p>
-                            <h5 class="lh-base mb-0">Revamp Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{% static 'img/portfolio-4.jpg' %}" alt="Catobi Completed Project">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{% static 'img/portfolio-4.jpg' %}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Valve Procurement</p>
-                            <h5 class="lh-base mb-0">Southern Swamp Sales Gas Evacuation Pipeline</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item third wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{% static 'img/portfolio-2.jpg' %}" alt="Catobi Completed Project">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{% static 'img/portfolio-2.jpg' %}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Valve Maintenance</p>
-                            <h5 class="lh-base mb-0">Retropfitting Pressure Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{% static 'img/portfolio-5.jpg' %}" alt="Catobi Completed Project">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{% static 'img/portfolio-5.jpg' %}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Valve Procurement</p>
-                            <h5 class="lh-base mb-0">Plant Engineering Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item fourth wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{% static 'img/portfolio-2.jpg' %}" alt="Catobi Completed Project">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{% static 'img/portfolio-2.jpg' %}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Professional Training</p>
-                            <h5 class="lh-base mb-0">Valve Maintenance Professional Training</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{% static 'img/portfolio-2.jpg' %}" alt="Catobi Completed Project">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="{% static 'img/portfolio-2.jpg' %}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Valve Procurement</p>
-                            <h5 class="lh-base mb-0">Bonga FPSO Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Projects Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="section-title text-center">
+      <h1 class="display-5 mb-5">Our Recent Projects</h1>
     </div>
-    <!-- Projects End -->
+    <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
+      <div class="col-12 pro-des text-center col-lg-6">
+        <p class="project-description">
+          At Catobi Nigeria Enterprises Limited, our projects speak for our
+          expertise and reliability. From engineering solutions to logistics and
+          technical services, each project demonstrates our commitment to
+          excellence, safety, and client satisfaction. Explore some of our most
+          recent work and see how we bring value to every engagement.
+        </p>
+        <!-- <ul class="list-inline mb-5" id="portfolio-flters">
+          <li class="mx-2 active" data-filter="*">All</li>
+          <li class="mx-2" data-filter=".first">Valve Procurement</li>
+          <li class="mx-2" data-filter=".second">Freight Forwarding</li>
+          <li class="mx-2" data-filter=".third">Valve Maintenance</li>
+          <li class="mx-2" data-filter=".fourth">Prefessional Training</li>
+        </ul> -->
+      </div>
+    </div>
+    <div class="row g-4 portfolio-container">
+      <div
+        class="col-lg-3 col-md-6 portfolio-item first wow fadeInUp"
+        data-wow-delay="0.1s"
+      >
+        <div class="rounded overflow-hidden">
+          <div class="position-relative overflow-hidden">
+            <img
+              class="img-fluid w-100"
+              src="{% static 'img/partners/gbaran-flange.png' %}"
+              alt="Catobi Completed Project"
+            />
+            <div class="portfolio-overlay">
+              <a
+                class="btn btn-square btn-outline-light mx-1"
+                href="{% static 'img/partners/gbaran-flange.png' %}"
+                data-lightbox="portfolio"
+                ><i class="fa fa-eye"></i
+              ></a>
+            </div>
+          </div>
+          <div class="border border-5 border-light border-top-0 p-4">
+            <p class="text-primary fw-medium mb-2">Morpol Engr. Services LTD</p>
+            <h5 class="lh-base mb-0">GBARAN GNC CONSTRUCTION PROJECT</h5>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-3 col-md-6 portfolio-item second wow fadeInUp"
+        data-wow-delay="0.3s"
+      >
+        <div class="rounded overflow-hidden">
+          <div class="position-relative overflow-hidden">
+            <img
+              class="img-fluid w-100"
+              src="{% static 'img/partners/ball-valve.png' %}"
+              alt="Catobi Completed Project"
+            />
+            <div class="portfolio-overlay">
+              <a
+                class="btn btn-square btn-outline-light mx-1"
+                href="{% static 'img/partners/ball-valve.png' %}"
+                data-lightbox="portfolio"
+                ><i class="fa fa-eye"></i
+              ></a>
+            </div>
+          </div>
+          <div class="border border-5 border-light border-top-0 p-4">
+            <p class="text-primary fw-medium mb-2">
+              Shell Development Company of Nigeria
+            </p>
+            <h5 class="lh-base mb-0">REVAMP OF 2 BALL VALVES 20" X 1500#</h5>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-3 col-md-6 portfolio-item fourth wow fadeInUp"
+        data-wow-delay="0.5s"
+      >
+        <div class="rounded overflow-hidden">
+          <div class="position-relative overflow-hidden">
+            <img
+              class="img-fluid w-100"
+              src="{% static 'img/partners/first-aid.png' %}"
+              alt="Catobi Completed Project"
+            />
+            <div class="portfolio-overlay">
+              <a
+                class="btn btn-square btn-outline-light mx-1"
+                href="{% static 'img/partners/first-aid.png' %}"
+                data-lightbox="portfolio"
+                ><i class="fa fa-eye"></i
+              ></a>
+            </div>
+          </div>
+          <div class="border border-5 border-light border-top-0 p-4">
+            <p class="text-primary fw-medium mb-2">Agip</p>
+            <h5 class="lh-base mb-0">BASIC AND ADVANCED FIRST AID TRAINING</h5>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-3 col-md-6 portfolio-item third wow fadeInUp"
+        data-wow-delay="0.1s"
+      >
+        <div class="rounded overflow-hidden">
+          <div class="position-relative overflow-hidden">
+            <img
+              class="img-fluid w-100"
+              src="{% static 'img/partners/shell-freight.jpg' %}"
+              alt="Catobi Completed Project"
+            />
+            <div class="portfolio-overlay">
+              <a
+                class="btn btn-square btn-outline-light mx-1"
+                href="{% static 'img/partners/shell-freight.jpg' %}"
+                data-lightbox="portfolio"
+                ><i class="fa fa-eye"></i
+              ></a>
+            </div>
+          </div>
+          <div class="border border-5 border-light border-top-0 p-4">
+            <p class="text-primary fw-medium mb-2">
+              Shell Development Company of Nigeria
+            </p>
+            <h5 class="lh-base mb-0">
+              FREIGHT FORWADING SERVICES AND IMPORT CLEARANCE
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-3 col-md-6 portfolio-item first wow fadeInUp"
+        data-wow-delay="0.3s"
+      >
+        <div class="rounded overflow-hidden">
+          <div class="position-relative overflow-hidden">
+            <img
+              class="img-fluid w-100"
+              src="{% static 'img/partners/platform-express-freight.jpg' %}"
+              alt="Catobi Completed Project"
+            />
+            <div class="portfolio-overlay">
+              <a
+                class="btn btn-square btn-outline-light mx-1"
+                href="{% static 'img/partners/platform-express-freight.jpg' %}"
+                data-lightbox="portfolio"
+                ><i class="fa fa-eye"></i
+              ></a>
+            </div>
+          </div>
+          <div class="border border-5 border-light border-top-0 p-4">
+            <p class="text-primary fw-medium mb-2">
+              Platform Express Global Resources Limited
+            </p>
+            <h5 class="lh-base mb-0">
+              CAVIBLASTER AND HOSES, EXPORT 257KGS FROM PH TO UK
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-3 col-md-6 portfolio-item third wow fadeInUp"
+        data-wow-delay="0.5s"
+      >
+        <div class="rounded overflow-hidden">
+          <div class="position-relative overflow-hidden">
+            <img
+              class="img-fluid w-100"
+              src="{% static 'img/partners/torque-crew.png' %}"
+              alt="Catobi Completed Project"
+            />
+            <div class="portfolio-overlay">
+              <a
+                class="btn btn-square btn-outline-light mx-1"
+                href="{% static 'img/partners/torque-crew.png' %}"
+                data-lightbox="portfolio"
+                ><i class="fa fa-eye"></i
+              ></a>
+            </div>
+          </div>
+          <div class="border border-5 border-light border-top-0 p-4">
+            <p class="text-primary fw-medium mb-2">LEE ENGINEERING/SPDC</p>
+            <h5 class="lh-base mb-0">DEPLOYMENT OF TORQUING CREW</h5>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-3 col-md-6 portfolio-item first wow fadeInUp"
+        data-wow-delay="0.5s"
+      >
+        <div class="rounded overflow-hidden">
+          <div class="position-relative overflow-hidden">
+            <img
+              class="img-fluid w-100"
+              src="{% static 'img/partners/hot-tapping.png' %}"
+              alt="Catobi Completed Project"
+            />
+            <div class="portfolio-overlay">
+              <a
+                class="btn btn-square btn-outline-light mx-1"
+                href="{% static 'img/partners/hot-tapping.png' %}"
+                data-lightbox="portfolio"
+                ><i class="fa fa-eye"></i
+              ></a>
+              <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
+            </div>
+          </div>
+          <div class="border border-5 border-light border-top-0 p-4">
+            <p class="text-primary fw-medium mb-2">NAOC-AGIP</p>
+            <h5 class="lh-base mb-0">
+              HOT TAPPING AND INSTALLATION OF DOUBLE BLOCK AND BLEED VALVE
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-3 col-md-6 portfolio-item fourth wow fadeInUp"
+        data-wow-delay="0.5s"
+      >
+        <div class="rounded overflow-hidden">
+          <div class="position-relative overflow-hidden">
+            <img
+              class="img-fluid w-100"
+              src="{% static 'img/partners/actuator-valve.png' %}"
+              alt="Catobi Completed Project"
+            />
+            <div class="portfolio-overlay">
+              <a
+                class="btn btn-square btn-outline-light mx-1"
+                href="{% static 'img/partners/actuator-valve.png' %}"
+                data-lightbox="portfolio"
+                ><i class="fa fa-eye"></i
+              ></a>
+            </div>
+          </div>
+          <div class="border border-5 border-light border-top-0 p-4">
+            <p class="text-primary fw-medium mb-2">SNEPCO/SPDC</p>
+            <h5 class="lh-base mb-0">ASSEMBLAGE OF ACTUATOR ON 24'' VALVES</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Projects End -->

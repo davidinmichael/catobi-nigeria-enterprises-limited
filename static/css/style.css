@@ -348,6 +348,15 @@
 
 
 /*** Project Portfolio ***/
+.pro-des.text-center {
+    margin: 2px auto;
+    padding-bottom: 1rem;
+}
+
+.project-description {
+    text-align: center;
+}
+
 #portfolio-flters li {
     display: inline-block;
     font-weight: 500;
