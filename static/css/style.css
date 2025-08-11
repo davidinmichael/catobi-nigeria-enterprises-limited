@@ -41,6 +41,26 @@
   opacity: 1;
 }
 
+.alert {
+  padding: 1rem;
+  text-align: center;
+  color: var(--light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.alert-success {
+  background-color: var(--primary);
+}
+
+.alert-warning {
+  background-color: orange;
+}
+
+.alert-error {
+  background-color: red;
+}
+
 /*** Button ***/
 .btn {
   font-weight: 500;

@@ -24,7 +24,9 @@ class CreateShipment(View):
         forms = ShipmentForm(data=request.POST)
         if forms.is_valid():
             shipment = forms.save()
+            messages.success(request, "Shipment successfully added!")
             return redirect("shipment_details", pk=shipment.pk)
+        messages.error(request, "Error! Confirm the details and try again.")
         return render(request, "freight/shipment.html")
 
 
@@ -79,6 +81,10 @@ class TrackShipments(View):
                 tracking_number=tracking_number.strip().upper()
             )
         except Shipment.DoesNotExist:
+            messages.error(
+                request,
+                f"Shipment with ID '{tracking_number.strip().upper()}' not found, confirm the tracking number and try again!",
+            )
             return redirect("freight")
         events = shipment_ob.events.all()
 

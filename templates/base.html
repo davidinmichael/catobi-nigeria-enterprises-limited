@@ -5,8 +5,14 @@
     <meta charset="utf-8" />
     <title>Catobi Nigeria Enterprises Limited</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta name="keywords" content="Oil and Gas, Freight, Valves Procurement, Valves Installation, Valves Maintenance, Logistics, Pipeline Intervention Solutions" />
-    <meta name="description" content="Catobi Nigeria Enterprises, an ISO 9001 certified company, specializes in providing critical pressure testing and calibration services tailored to the rigorous demands of the oil and gas industry" />
+    <meta
+      name="keywords"
+      content="Oil and Gas, Freight, Valves Procurement, Valves Installation, Valves Maintenance, Logistics, Pipeline Intervention Solutions"
+    />
+    <meta
+      name="description"
+      content="Catobi Nigeria Enterprises, an ISO 9001 certified company, specializes in providing critical pressure testing and calibration services tailored to the rigorous demands of the oil and gas industry"
+    />
 
     <!-- Favicon -->
     <link href="{% static 'img/logo-01.jpg' %}" rel="icon" />
@@ -20,7 +26,7 @@
     />
 
     <!-- Icon Font Stylesheet -->
-  
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
       rel="stylesheet"
@@ -50,9 +56,7 @@
     <!-- Template Stylesheet -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
     <link href="{% static 'css/product-base.css' %}" rel="stylesheet" />
-    {% block stylesheet %}
-      
-    {% endblock stylesheet %}
+    {% block stylesheet %} {% endblock stylesheet %}
   </head>
 
   <body>
@@ -70,10 +74,20 @@
       </div>
     </div>
     <!-- Spinner End -->
-    {% include "partials/nav.html" %} {% block content %} {% endblock content %}
-    
+    {% include "partials/nav.html" %}
+    {% if messages %} {% for message in messages %}
+    <p class="alert alert-{{ message.tags }}" id="alertBox">{{message}}</p>
+    {% endfor %} {% endif %}
+    <div class="toast-box" id="toastBox"></div>
+    {% block content %}
+    {% endblock content %}
+
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a
+      href="#"
+      class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
     {% include "partials/footer.html" %}
 
@@ -90,8 +104,6 @@
 
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
-    {% block script %}
-      
-    {% endblock script %}
+    {% block script %} {% endblock script %}
   </body>
 </html>
