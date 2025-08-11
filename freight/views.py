@@ -18,9 +18,15 @@ DHL_API_KEY = os.getenv("DHL_API_KEY")
 
 class CreateShipment(View):
     def get(self, request):
+        if not request.user.is_authenticated:
+            messages.error(request, "Only accessible to Admins.")
+            return redirect("login")
         return render(request, "freight/shipment.html")
 
     def post(self, request):
+        if not request.user.is_authenticated:
+            messages.error(request, "Only accessible to Admins.")
+            return redirect("login")
         forms = ShipmentForm(data=request.POST)
         if forms.is_valid():
             shipment = forms.save()
@@ -31,11 +37,17 @@ class CreateShipment(View):
 
 
 def view_shipments(request):
+    if not request.user.is_authenticated:
+        messages.error(request, "Only accessible to Admins.")
+        return redirect("login")
     shipments = Shipment.objects.all()
     return render(request, "freight/all_shipments.html", {"shipments": shipments})
 
 
 def shipment_detail(request, pk):
+    if not request.user.is_authenticated:
+        messages.error(request, "Only accessible to Admins.")
+        return redirect("login")
     shipment = get_object_or_404(Shipment, pk=pk)
     events = shipment.events.all()  # Because of related_name="events"
 

@@ -26,6 +26,7 @@ urlpatterns = [
     path("", include("core.urls")),
     path("equipment/", include("equipments.urls")),
     path("freight/", include("freight.urls")),
+    path("admin-space/account/", include("account.urls")),
     path("internal-memo/", views.memo_redirect, name="memo_redirect"),
 ]
 

@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block content %}
+<div class="login-container">
+  <h1 class="login-title">Catobi Login</h1>
+
+  <form method="post" class="login-form">
+    {% csrf_token %}
+
+    <div class="login-field">
+      <label for="email" class="login-label">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="login-input"
+        placeholder="you@catobi.com"
+        required
+      />
+    </div>
+
+    <div class="login-field">
+      <label for="password" class="login-label">Password</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        class="login-input"
+        placeholder="Enter password"
+        required
+      />
+    </div>
+
+    <button type="submit" class="login-btn">Login</button>
+  </form>
+
+  <p class="login-register-text">
+    Don't have an account?
+    <a href="{% url 'register' %}" class="login-register-link">Register here</a
+    >.
+  </p>
+</div>
+{% endblock %}
