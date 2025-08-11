@@ -1,7 +1,16 @@
 from django.urls import path
 from django.http import HttpResponse
 from .views import (
-	Home, CorporateView, MDDesk, MissionVision, Services, Facilities, Projects, ContactUs, QuotesContacts, RequestQuote
+    Home,
+    CorporateView,
+    MDDesk,
+    MissionVision,
+    Services,
+    Facilities,
+    Projects,
+    ContactUs,
+    QuotesContacts,
+    RequestQuote,
 )
 from . import views
 

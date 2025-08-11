@@ -1,0 +1,42 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="freight-content">
+  <h1>Catobi Shipment Tracking</h1>
+
+  <form method="GET" action="{% url 'track_courier' %}" class="tracking-form">
+    <h2>Track Shipments</h2>
+    <div class="tracking-from-input-group">
+      <input
+        type="text"
+        name="tracking_number"
+        placeholder="Enter your tracking number"
+      />
+      <button type="submit">Track Now</button>
+    </div>
+  </form>
+
+  <!-- <form method="GET" action="" class="tracking-form">
+    <h2>Track Sea Cargo Shipments</h2>
+    <div class="tracking-from-input-group">
+      <input
+        type="text"
+        name="sea_tracking"
+        placeholder="Enter your tracking number"
+      />
+      <button type="submit">Track Now</button>
+    </div>
+  </form>
+
+  <form method="GET" action="" class="tracking-form">
+    <h2>Track Air Cargo Shipments</h2>
+    <div class="tracking-from-input-group">
+      <input
+        type="text"
+        name="air_tracking"
+        placeholder="Enter your tracking number"
+      />
+      <button type="submit">Track Now</button>
+    </div>
+  </form> -->
+</div>
+
+{% endblock content %}

@@ -5,6 +5,7 @@ from .forms import ContactForm, NewsLetterForm, QuoteForm
 from .models import Contact, NewsLetter, Quote
 
 
+
 class Home(View):
     def get(self, request):
         return render(request, "core/index.html")
@@ -93,3 +94,5 @@ class QuotesContacts(View):
 def memo_redirect(request):
     url = "https://netorgft15862178.sharepoint.com/sites/Memo/_layouts/15/listforms.aspx?cid=MzRhNTgwNTAtNjRkOC00NmRkLTkzMmEtMWU1MTM2YmVhOTBk&nav=MWFlMTdkMjYtMjZlZC00NjY3LTg1ZjUtYTJlMzlmNTNiODY0"
     return redirect(url)
+
+

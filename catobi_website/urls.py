@@ -25,6 +25,7 @@ urlpatterns = [
     path("__reload__/", include("django_browser_reload.urls")),
     path("", include("core.urls")),
     path("equipment/", include("equipments.urls")),
+    path("freight/", include("freight.urls")),
     path("internal-memo/", views.memo_redirect, name="memo_redirect"),
 ]
 
