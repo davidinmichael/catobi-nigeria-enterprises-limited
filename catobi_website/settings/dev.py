@@ -7,8 +7,7 @@ load_dotenv()
 
 DEBUG = False
 
-# ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(',')
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(',')
 
 DATABASES = {
     'default': {
