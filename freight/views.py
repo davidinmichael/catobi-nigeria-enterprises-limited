@@ -4,8 +4,11 @@ import requests
 from bs4 import BeautifulSoup
 from django.contrib import messages
 from django.shortcuts import get_object_or_404, redirect, render
+from django.template.loader import render_to_string
 from django.views import View
 from dotenv import load_dotenv
+
+from core.utils import send_email
 
 from .forms import ShipmentForm, TrackingEventForm
 from .models import Shipment, TrackingEvent
@@ -14,6 +17,7 @@ load_dotenv()
 
 DHL_BASE_URL = os.getenv("DHL_BASE_URL")
 DHL_API_KEY = os.getenv("DHL_API_KEY")
+BASE_URL = os.getenv("BASE_URL")
 
 
 class CreateShipment(View):
@@ -30,6 +34,14 @@ class CreateShipment(View):
         forms = ShipmentForm(data=request.POST)
         if forms.is_valid():
             shipment = forms.save()
+            email = shipment.client_email
+            context = {
+                "client_email": email,
+                "shipment": shipment,
+                "url": f"{BASE_URL}/freight/track-courier/?tracking_number={shipment.tracking_number}",
+            }
+            template = render_to_string("freight/shipment_email.html", context)
+            send_email(email, "Catobi Freight: Shipment Status", template)
             messages.success(request, "Shipment successfully added!")
             return redirect("shipment_details", pk=shipment.pk)
         messages.error(request, "Error! Confirm the details and try again.")
@@ -62,6 +74,16 @@ def shipment_detail(request, pk):
             shipment.last_location = event.location
             shipment.status = event.status_description
             shipment.save()
+            
+            email = shipment.client_email
+            print(f"Email: {email}")
+            context = {
+                "client_email": email,
+                "shipment": shipment,
+                "url": f"{BASE_URL}/freight/track-courier/?tracking_number={shipment.tracking_number}",
+            }
+            template = render_to_string("freight/shipment_update.html", context)
+            send_email(email, "Catobi Freight: Shipment Update", template)
 
             return redirect("shipment_details", pk=shipment.pk)
     else:

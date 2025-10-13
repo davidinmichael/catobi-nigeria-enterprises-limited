@@ -5,6 +5,7 @@ from .utils import generate_tracking_number
 
 class Shipment(models.Model):
     client = models.CharField(max_length=100, null=True, blank=True)
+    client_email = models.EmailField(null=True, blank=True)
     tracking_number = models.CharField(max_length=50, unique=True)
     purchase_order = models.CharField(max_length=50, unique=True)
     waybill_number = models.CharField(max_length=50, unique=True)

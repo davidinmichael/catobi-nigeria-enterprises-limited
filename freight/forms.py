@@ -8,6 +8,7 @@ class ShipmentForm(forms.ModelForm):
         model = Shipment
         fields = [
             "client",
+            "client_email",
             "purchase_order",
             "waybill_number",
             "carrier",

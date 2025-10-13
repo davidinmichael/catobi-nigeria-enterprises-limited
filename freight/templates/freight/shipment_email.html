@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shipment Created</title>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    "
+  >
+    <table
+      width="100%"
+      border="0"
+      cellspacing="0"
+      cellpadding="0"
+      style="background-color: #f5f5f5; padding: 40px 0"
+    >
+      <tr>
+        <td align="center">
+          <table
+            width="600"
+            border="0"
+            cellspacing="0"
+            cellpadding="0"
+            style="
+              background-color: #ffffff;
+              border-radius: 8px;
+              overflow: hidden;
+            "
+          >
+            <tr>
+              <td
+                align="center"
+                style="background-color: #117554; padding: 20px"
+              >
+                <h1 style="display: flex; align-items: center; gap: 10px">
+                  <img
+                    src="https://res.cloudinary.com/dskpdlvxu/image/upload/v1760363713/catobilogo_white_quj4ia.png"
+                    alt="Catobi Logo"
+                  />
+                </h1>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding: 30px">
+                <h2 style="color: #117554; margin-top: 0">
+                  Dear Valued Customer,
+                </h2>
+                <p
+                  style="font-size: 16px; line-height: 1.6; margin-bottom: 20px"
+                >
+                  We’re pleased to inform you that your shipment has been
+                  created successfully. Below are your shipment details:
+                </p>
+
+                <table
+                  width="100%"
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  style="font-size: 15px; border-collapse: collapse"
+                >
+                  <tr>
+                    <td
+                      style="padding: 8px 0; color: #117554; font-weight: bold"
+                    >
+                      Tracking Number:
+                    </td>
+                    <td style="padding: 8px 0">
+                      {{ shipment.tracking_number }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="padding: 8px 0; color: #117554; font-weight: bold"
+                    >
+                      Purchase Order:
+                    </td>
+                    <td style="padding: 8px 0">
+                      {{ shipment.purchase_order }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="padding: 8px 0; color: #117554; font-weight: bold"
+                    >
+                      Waybill Number:
+                    </td>
+                    <td style="padding: 8px 0">
+                      {{ shipment.waybill_number }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="padding: 8px 0; color: #117554; font-weight: bold"
+                    >
+                      Carrier:
+                    </td>
+                    <td style="padding: 8px 0">
+                      {{ shipment.carrier|default:"Not specified" }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="padding: 8px 0; color: #117554; font-weight: bold"
+                    >
+                      Origin:
+                    </td>
+                    <td style="padding: 8px 0">
+                      {{ shipment.origin|default:"-" }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="padding: 8px 0; color: #117554; font-weight: bold"
+                    >
+                      Destination:
+                    </td>
+                    <td style="padding: 8px 0">
+                      {{ shipment.destination|default:"-" }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="padding: 8px 0; color: #117554; font-weight: bold"
+                    >
+                      Status:
+                    </td>
+                    <td style="padding: 8px 0">
+                      {{ shipment.status|default:"Pending" }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="padding: 8px 0; color: #117554; font-weight: bold"
+                    >
+                      Estimated Delivery:
+                    </td>
+                    <td style="padding: 8px 0">
+                      {{ shipment.estimated_delivery|date:"F j, Y"|default:"TBD"
+                      }}
+                    </td>
+                  </tr>
+                </table>
+
+                <div style="text-align: center; margin: 30px 0">
+                  <a
+                    href="{{ url }}"
+                    style="
+                      background-color: #117554;
+                      color: #ffffff;
+                      text-decoration: none;
+                      padding: 12px 25px;
+                      border-radius: 5px;
+                      font-weight: bold;
+                      display: inline-block;
+                    "
+                  >
+                    Track Your Shipment
+                  </a>
+                </div>
+
+                <p style="font-size: 15px; line-height: 1.6; margin-top: 30px">
+                  Thank you for choosing <strong>Planet Plus Express</strong>.
+                  We’ll keep you updated as your shipment progresses.
+                </p>
+                <p style="font-size: 14px; color: #555">
+                  If you have any questions, feel free to contact our support
+                  team.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td
+                align="center"
+                style="background-color: #ff0000; padding: 15px"
+              >
+                <p style="color: #ffffff; margin: 0; font-size: 13px">
+                  &copy; {{ current_year|default:"2025" }} Catobi Nigeria Enterprises Limited.
+                  All Rights Reserved.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
