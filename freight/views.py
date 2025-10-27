@@ -41,10 +41,12 @@ class CreateShipment(View):
                 "url": f"{BASE_URL}/freight/track-courier/?tracking_number={shipment.tracking_number}",
             }
             template = render_to_string("freight/shipment_email.html", context)
+            print("Calling email function")
             send_email(email, "Catobi Freight: Shipment Status", template)
             messages.success(request, "Shipment successfully added!")
             return redirect("shipment_details", pk=shipment.pk)
         messages.error(request, "Error! Confirm the details and try again.")
+        print(f"Errors: {forms.errors}")
         return render(request, "freight/shipment.html")
 
 
@@ -74,7 +76,7 @@ def shipment_detail(request, pk):
             shipment.last_location = event.location
             shipment.status = event.status_description
             shipment.save()
-            
+
             email = shipment.client_email
             print(f"Email: {email}")
             context = {

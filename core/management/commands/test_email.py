@@ -14,5 +14,5 @@ class Command(BaseCommand):
             "name": "David",
         }
         template = render_to_string("core/test.html", context)
-        send_email("davidinmichael@gmail.com", "Catobi: Confirm Account", template)
+        send_email("christabeljustin16@gmail.com", "Catobi: Confirm Account", template)
         self.stdout.write(self.style.SUCCESS("Email Sent!"))

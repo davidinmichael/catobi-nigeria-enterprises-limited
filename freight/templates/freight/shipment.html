@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 <div class="shipment-form-container">
-   <div class="shipments-header">
+  <div class="shipments-header">
     <h2 class="shipments-title">Add New Shipment</h2>
     <a href="{% url 'view_shipments' %}" class="shipments-create-btn"
       >View Shipments</a
@@ -40,7 +40,6 @@
         type="text"
         id="purchase_order"
         name="purchase_order"
-        required
       />
     </div>
 
@@ -51,7 +50,6 @@
         type="text"
         id="waybill_number"
         name="waybill_number"
-        required
       />
     </div>
 
@@ -69,7 +67,13 @@
 
     <div class="shipment-form-group">
       <label class="shipment-label" for="origin">Origin</label>
-      <input class="shipment-input" type="text" id="origin" name="origin" placeholder="e.g., China"/>
+      <input
+        class="shipment-input"
+        type="text"
+        id="origin"
+        name="origin"
+        placeholder="e.g., China"
+      />
     </div>
 
     <div class="shipment-form-group">
@@ -79,7 +83,8 @@
         type="text"
         id="destination"
         name="destination"
-		placeholder="e.g., Lagos"
+        placeholder="e.g., Lagos"
+        required
       />
     </div>
 
@@ -91,6 +96,7 @@
         id="status"
         name="status"
         placeholder="e.g., In Transit, Delivered"
+        required
       />
     </div>
 
@@ -101,7 +107,8 @@
         type="text"
         id="last_location"
         name="last_location"
-		placeholder="e.g., U.S Customs"
+        placeholder="e.g., U.S Customs"
+        required
       />
     </div>
 
