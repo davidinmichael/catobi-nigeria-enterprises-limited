@@ -1,0 +1,142 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="shipment-detail-container">
+  <div class="shipments-header">
+    <h2 class="shipments-title">Edit Shipment</h2>
+    <a href="{% url 'delete_shipment' shipment.id %}" class="shipment-delete-btn"
+      >x Delete Shipment</a
+    >
+  </div>
+   <form method="POST" class="shipment-form" action="{% url 'edit_shipment' shipment.id %}">
+    {% csrf_token %}
+
+    <div class="shipment-form-group">
+      <label class="shipment-label" for="client">Client</label>
+      <input
+        class="shipment-input"
+        type="text"
+        id="client"
+        name="client"
+        required
+		value="{{shipment.client}}"
+        placeholder="{{shipment.client}}"
+      />
+    </div>
+
+    <div class="shipment-form-group">
+      <label class="shipment-label" for="client_email">Client Email</label>
+      <input
+        class="shipment-input"
+        type="email"
+        id="client_email"
+        name="client_email"
+        required
+        value="{{shipment.client_email}}"
+        placeholder="{{shipment.client_email}}"
+      />
+    </div>
+
+    <div class="shipment-form-group">
+      <label class="shipment-label" for="purchase_order">Purchase Order</label>
+      <input
+        class="shipment-input"
+        type="text"
+        id="purchase_order"
+        name="purchase_order"
+		value="{{shipment.purchase_order}}"
+        placeholder="{{shipment.purchase_order}}"
+      />
+    </div>
+
+    <div class="shipment-form-group">
+      <label class="shipment-label" for="waybill_number">Waybill Number</label>
+      <input
+        class="shipment-input"
+        type="text"
+        id="waybill_number"
+        name="waybill_number"
+		value="{{shipment.waybill_number}}"
+        placeholder="{{shipment.waybill_number}}"
+      />
+    </div>
+
+    <div class="shipment-form-group">
+      <label class="shipment-label" for="carrier">Carrier</label>
+      <input
+        class="shipment-input"
+        type="text"
+        id="carrier"
+        name="carrier"
+        required
+		value="{{shipment.carrier}}"
+        placeholder="{{shipment.carrier}}"
+      />
+    </div>
+
+    <div class="shipment-form-group">
+      <label class="shipment-label" for="origin">Origin</label>
+      <input
+        class="shipment-input"
+        type="text"
+        id="origin"
+        name="origin"
+        value="{{shipment.origin}}"
+        placeholder="{{shipment.origin}}"
+      />
+    </div>
+
+    <div class="shipment-form-group">
+      <label class="shipment-label" for="destination">Destination</label>
+      <input
+        class="shipment-input"
+        type="text"
+        id="destination"
+        name="destination"
+        required
+        value="{{shipment.destination}}"
+        placeholder="{{shipment.destination}}"
+      />
+    </div>
+
+    <div class="shipment-form-group">
+      <label class="shipment-label" for="status">Status</label>
+      <input
+        class="shipment-input"
+        type="text"
+        id="status"
+        name="status"
+        required
+        value="{{shipment.status}}"
+        placeholder="{{shipment.status}}"
+      />
+    </div>
+
+    <div class="shipment-form-group">
+      <label class="shipment-label" for="last_location">Last Location</label>
+      <input
+        class="shipment-input"
+        type="text"
+        id="last_location"
+        name="last_location"
+        required
+        value="{{shipment.last_location}}"
+        placeholder="{{shipment.last_location}}"
+      />
+    </div>
+
+    <div class="shipment-form-group">
+      <label class="shipment-label" for="estimated_delivery"
+        >Estimated Delivery - <span>{{shipment.estimated_delivery}}</span></label
+      > 
+      <input
+        class="shipment-input"
+        type="date"
+        id="estimated_delivery"
+        name="estimated_delivery"
+		value="{{shipment.estimated_delivery}}"
+      />
+    </div>
+
+    <button type="submit" class="shipment-submit-btn">Save Shipment</button>
+  </form>
+</div>
+{% endblock content %}

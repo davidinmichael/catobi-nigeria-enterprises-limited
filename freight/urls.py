@@ -1,7 +1,7 @@
 from django.urls import path
 
 from . import views
-from .views import CreateShipment, TrackShipments, EditShipmentView
+from .views import CreateShipment, TrackShipments, EditShipmentView, DeleteShipmentView
 
 urlpatterns = [
     path("", views.freight_view, name="freight"),
@@ -19,7 +19,12 @@ urlpatterns = [
     ),
     path(
         "admin-freight/delete-shipment/<int:pk>/",
-        EditShipmentView.as_view(),
+        DeleteShipmentView.as_view(),
         name="delete_shipment",
+    ),
+    path(
+        "admin-freight/edit-shipment/<int:pk>/",
+        EditShipmentView.as_view(),
+        name="edit_shipment",
     ),
 ]

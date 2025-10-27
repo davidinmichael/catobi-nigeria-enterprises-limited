@@ -728,7 +728,7 @@
 }
 /* Container */
 .shipments-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
   background: white;
@@ -793,6 +793,15 @@
 
 .shipments-update-btn:hover {
   background: #e0a800;
+}
+
+.shipment-delete-btn {
+  background: rgba(255, 0, 0, 0.712);
+  color: black;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  text-decoration: none;
 }
 
 /* Empty State */

@@ -131,7 +131,7 @@ class TrackShipments(View):
         return render(request, "freight/track_results.html", context)
 
 
-class EditShipmentView(View):
+class DeleteShipmentView(View):
 
     def get(self, request, pk):
         try:
@@ -141,4 +141,33 @@ class EditShipmentView(View):
             return redirect("view_shipments")
         shipment.delete()
         messages.success(request, "Shipment deleted")
+        return redirect("view_shipments")
+
+
+class EditShipmentView(View):
+
+    def get(self, request, pk):
+        try:
+            shipment = Shipment.objects.get(id=pk)
+        except Shipment.DoesNotExist:
+            messages.error(request, "Shipment not found!")
+            return redirect("view_shipments")
+        context = {"shipment": shipment}
+        return render(request, "freight/edit_shipment.html", context)
+
+    def post(self, request, pk):
+        print(f"shipment: {pk}")
+        try:
+            print("Fetching shipment")
+            shipment = Shipment.objects.get(id=pk)
+        except Shipment.DoesNotExist:
+            messages.error(request, "Shipment not found!")
+            return redirect("view_shipments")
+        form = ShipmentForm(request.POST, instance=shipment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Shipment updated successfully!")
+            return redirect("view_shipments")
+        messages.error(request, "Invalid form details!")
+        print(f"Errors: {form.errors}")
         return redirect("view_shipments")

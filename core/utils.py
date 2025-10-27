@@ -15,7 +15,6 @@ DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL")
 
 
 def send_email(user_email, subject, template, from_email=DEFAULT_FROM_EMAIL):
-    print("Email functio called")
     try:
         email = EmailMultiAlternatives(
             subject=subject,
