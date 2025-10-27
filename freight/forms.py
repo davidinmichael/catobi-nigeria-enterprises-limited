@@ -17,6 +17,7 @@ class ShipmentForm(forms.ModelForm):
             "status",
             "last_location",
             "estimated_delivery",
+            "tracking_number",
         ]
 
 

@@ -136,6 +136,18 @@
       />
     </div>
 
+	  <div class="shipment-form-group">
+      <label class="shipment-label" for="purchase_order">Tracking Number</label>
+      <input
+        class="shipment-input"
+        type="text"
+        id="tracking_number"
+        name="tracking_number"
+		value="{{shipment.tracking_number}}"
+        placeholder="{{shipment.tracking_number}}"
+      />
+    </div>
+
     <button type="submit" class="shipment-submit-btn">Save Shipment</button>
   </form>
 </div>
