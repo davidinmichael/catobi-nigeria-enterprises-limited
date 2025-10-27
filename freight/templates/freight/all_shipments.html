@@ -30,11 +30,21 @@
         <td>{{ shipment.last_location }}</td>
         <td>{{ shipment.estimated_delivery }}</td>
         <td>{{ shipment.last_updated|date:"Y-m-d H:i" }}</td>
-        <td>
+        <td class="action-btns">
           <a
             href="{% url 'shipment_details' shipment.id %}"
             class="shipments-update-btn"
-            >Details</a
+            ><i class="fa-solid fa-info"></i></a
+          >
+          <a
+            href="{% url 'shipment_details' shipment.id %}"
+            class="shipments-update-btn"
+            ><i class="fa-solid fa-pen-to-square"></i></a
+          >
+          <a
+            href="{% url 'delete_shipment' shipment.id %}"
+            class="shipments-update-btn shipment-delete-btn"
+            ><i class="fa-solid fa-trash"></i></a
           >
         </td>
       </tr>

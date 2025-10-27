@@ -129,3 +129,16 @@ class TrackShipments(View):
             "events": events,
         }
         return render(request, "freight/track_results.html", context)
+
+
+class EditShipmentView(View):
+
+    def get(self, request, pk):
+        try:
+            shipment = Shipment.objects.get(id=pk)
+        except Shipment.DoesNotExist:
+            messages.error(request, "Shipment not found!")
+            return redirect("view_shipments")
+        shipment.delete()
+        messages.success(request, "Shipment deleted")
+        return redirect("view_shipments")
