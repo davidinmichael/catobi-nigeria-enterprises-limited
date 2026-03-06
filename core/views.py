@@ -43,6 +43,8 @@ class Services(View):
             return render(request, "core/training.html")
         elif service == "freight":
             return render(request, "core/freight.html")
+        elif service == "aai":
+            return render(request, "core/aai.html")
 
 
 class Facilities(View):

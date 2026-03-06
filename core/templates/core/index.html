@@ -1,4 +1,7 @@
-{% extends "base.html" %} {% load static %} {% block content %} {% include "partials/top_bar.html" %}
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% include "partials/top_bar.html" %}
 <!-- Carousel Start -->
 <div class="container-fluid p-0 pb-5">
   <div class="owl-carousel header-carousel position-relative">
@@ -154,6 +157,44 @@
                 href="{% url 'quote' %}"
                 class="btn btn-light py-md-3 px-md-5 animated slideInRight"
                 >Get a Quote</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="owl-carousel-item position-relative">
+      <img
+        class="img-fluid"
+        src="{% static 'img/header-05.png' %}"
+        alt="AAI Fabric Maintenance Services"
+      />
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+        style="background: rgba(53, 53, 53, 0.7)"
+      >
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-8 text-center">
+              <h5 class="text-white text-uppercase mb-3 animated slideInDown">
+                AAI Fabric Maintenance Services
+              </h5>
+              <h1 class="display-3 text-white animated slideInDown mb-4">
+                Fabric Maintenance & Corrosion Control Services
+              </h1>
+              <p class="fs-5 fw-medium text-white mb-4 pb-2">
+                Catobi delivers comprehensive fabric maintenance and corrosion protection solutions.
+              </p>
+              <a
+                href="{% url 'services' 'aai' %}"
+                class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                >Read More</a
+              >
+              <a
+                href="{% url 'quote' %}"
+                class="btn btn-light py-md-3 px-md-5 animated slideInRight"
+                >Free Quote</a
               >
             </div>
           </div>
@@ -387,7 +428,10 @@
           >
             <h4 class="mb-3">Flange Management Services</h4>
             <p>
-              Complete flange integrity solutions covering bolting, torque/tensioning, leak detection, and controlled joint assembly to prevent leaks and maintain system pressure during operations and shutdowns
+              Complete flange integrity solutions covering bolting,
+              torque/tensioning, leak detection, and controlled joint assembly
+              to prevent leaks and maintain system pressure during operations
+              and shutdowns
             </p>
             <a class="fw-medium" href="{% url 'services' 'valve' %}"
               >Read More<i class="fa fa-arrow-right ms-2"></i
@@ -407,9 +451,14 @@
           <div
             class="p-4 text-center border border-5 border-light border-top-0"
           >
-            <h4 class="mb-3">Valve Solutions – Assembly, Maintenance & Supply</h4>
+            <h4 class="mb-3">
+              Valve Solutions – Assembly, Maintenance & Supply
+            </h4>
             <p>
-              End-to-end services for industrial valves, including precision assembly, preventive and corrective maintenance, and reliable sourcing of top-quality valves to ensure system integrity and operational safety.
+              End-to-end services for industrial valves, including precision
+              assembly, preventive and corrective maintenance, and reliable
+              sourcing of top-quality valves to ensure system integrity and
+              operational safety.
             </p>
             <a class="fw-medium" href="{% url 'services' 'valve' %}"
               >Read More<i class="fa fa-arrow-right ms-2"></i
@@ -431,7 +480,9 @@
           >
             <h4 class="mb-3">General Procurement & Supply Services</h4>
             <p>
-              Efficient sourcing and supply of industrial tools, spare parts, and equipment from verified vendors, ensuring cost-effective procurement without compromising on quality or delivery timelines.
+              Efficient sourcing and supply of industrial tools, spare parts,
+              and equipment from verified vendors, ensuring cost-effective
+              procurement without compromising on quality or delivery timelines.
             </p>
             <a class="fw-medium" href="{% url 'services' 'valve' %}"
               >Read More<i class="fa fa-arrow-right ms-2"></i
@@ -453,7 +504,10 @@
           >
             <h4 class="mb-3">Technical Training & Workforce Development</h4>
             <p>
-              Customized training programs focused on industry-specific competencies in maintenance, safety, operations, and inspection — ensuring your workforce remains skilled, compliant, and operationally ready.
+              Customized training programs focused on industry-specific
+              competencies in maintenance, safety, operations, and inspection —
+              ensuring your workforce remains skilled, compliant, and
+              operationally ready.
             </p>
             <a class="fw-medium" href="{% url 'services' 'training' %}"
               >Read More<i class="fa fa-arrow-right ms-2"></i
