@@ -205,6 +205,44 @@
     <div class="owl-carousel-item position-relative">
       <img
         class="img-fluid"
+        src="{% static 'img/header-06.png' %}"
+        alt="Flow Measurement Calibration"
+      />
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+        style="background: rgba(53, 53, 53, 0.7)"
+      >
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-8 text-center">
+              <h5 class="text-white text-uppercase mb-3 animated slideInDown">
+                Catobi Technical Services
+              </h5>
+              <h1 class="display-3 text-white animated slideInDown mb-4">
+                Calibration and Recertification of Oil &amp; Gas Equipment
+              </h1>
+              <p class="fs-5 fw-medium text-white mb-4 pb-2">
+                Catobi ensures the accuracy, reliability, and regulatory compliance of your critical measurement and pressure-control instruments.
+              </p>
+              <a
+                href="{% url 'services' 'calibration' %}"
+                class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                >Read More</a
+              >
+              <a
+                href="{% url 'quote' %}"
+                class="btn btn-light py-md-3 px-md-5 animated slideInRight"
+                >Free Quote</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="owl-carousel-item position-relative">
+      <img
+        class="img-fluid"
         src="{% static 'img/header-03.jpg' %}"
         alt="Catobi Training Facilities"
       />
@@ -423,6 +461,7 @@
               alt="Flange Management"
             />
           </div>
+
           <div
             class="p-4 text-center border border-5 border-light border-top-0"
           >
@@ -448,6 +487,7 @@
               alt="Valve Maintenance"
             />
           </div>
+          
           <div
             class="p-4 text-center border border-5 border-light border-top-0"
           >
@@ -490,6 +530,7 @@
           </div>
         </div>
       </div>
+
       <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
         <div class="service-item">
           <div class="overflow-hidden">
@@ -515,6 +556,83 @@
           </div>
         </div>
       </div>
+      
+
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="service-item">
+          <div class="overflow-hidden">
+            <img
+              class="img-fluid"
+              src="{% static 'img/fab-02.png' %}"
+              alt="AAI Fabric Maintenance"
+            />
+          </div>
+          <div
+            class="p-4 text-center border border-5 border-light border-top-0"
+          >
+           <h4 class="mb-3">AAI Fabric Maintenance</h4>
+<p>
+  Comprehensive solutions for corrosion protection and structural integrity, 
+  utilizing industry-standard blasting and coating techniques to extend 
+  the life and performance of your industrial assets.
+</p>
+            <a class="fw-medium" href="{% url 'services' 'aai' %}"
+              >Read More<i class="fa fa-arrow-right ms-2"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="service-item">
+          <div class="overflow-hidden">
+            <img
+              class="img-fluid"
+              src="{% static 'img/cal-01.png' %}"
+              alt="Calibration and Recertification of Oil and Gas Equipment"
+            />
+          </div>
+          <div
+            class="p-4 text-center border border-5 border-light border-top-0"
+          >
+            <h4 class="mb-3">Calibration and Recertification of Oil &amp; Gas Equipment</h4>
+<p>
+  Precision calibration and certification of flow, pressure, and temperature 
+  instruments to ensure measurement accuracy, operational safety, and 
+  full regulatory compliance.
+</p>
+            <a class="fw-medium" href="{% url 'services' 'calibration' %}"
+              >Read More<i class="fa fa-arrow-right ms-2"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="service-item">
+          <div class="overflow-hidden">
+            <img
+              class="img-fluid"
+              src="{% static 'img/fab-06.png' %}"
+              alt="Catobi Training"
+            />
+          </div>
+          <div
+            class="p-4 text-center border border-5 border-light border-top-0"
+          >
+            <h4 class="mb-3">Grit Blasting</h4>
+<p>
+  Specialized surface preparation using high-quality abrasive materials 
+  to remove rust, scale, and contaminants, providing the ideal profile 
+  for long-lasting and effective protective coating applications.
+</p>
+            <a class="fw-medium" href="{% url 'services' 'pipeline' %}"
+              >Read More<i class="fa fa-arrow-right ms-2"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
