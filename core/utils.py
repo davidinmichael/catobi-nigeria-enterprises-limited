@@ -23,7 +23,7 @@ def send_email(user_email, subject, template, from_email=NOTIFICATION_EMAIL):
             body="Your email client doesn't support this content type, view this on another email client or browser.",
             from_email=from_email,
             to=[user_email],
-            cc=[DEFAULT_FROM_EMAIL]
+            cc=[FREIGHT_EMAIL]
         )
         email.attach_alternative(template, "text/html")
         email.send()
