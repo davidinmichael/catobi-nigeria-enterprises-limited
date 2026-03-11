@@ -78,7 +78,6 @@ def shipment_detail(request, pk):
             shipment.save()
 
             email = shipment.client_email
-            print(f"Email: {email}")
             context = {
                 "client_email": email,
                 "shipment": shipment,

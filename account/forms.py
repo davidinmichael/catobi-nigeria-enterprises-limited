@@ -7,6 +7,7 @@ from .models import Account
 class LoginForm(forms.Form):
     email = forms.CharField()
     password = forms.CharField(max_length=50)
+    security_code = forms.CharField(max_length=5)
 
     def clean_email(self):
         email = self.cleaned_data.get("email")

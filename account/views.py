@@ -3,7 +3,12 @@ from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .forms import LoginForm, RegistrationForm
 from django.views import View
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+
+LOGIN_CODE = os.getenv("LOGIN_CODE")
 
 class LoginView(View):
     def get(self, request):
@@ -14,6 +19,11 @@ class LoginView(View):
         if form.is_valid():
             email = form.cleaned_data["email"]
             password = form.cleaned_data["password"]
+            security_code = form.cleaned_data["security_code"]
+            
+            if LOGIN_CODE != security_code:
+                messages.error(request, "Invalid security code!")
+                return render(request, "account/login.html")
 
             user = authenticate(request, email=email, password=password)
             if user is not None:
