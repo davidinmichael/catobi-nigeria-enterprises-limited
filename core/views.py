@@ -97,3 +97,6 @@ class QuotesContacts(View):
 def memo_redirect(request):
     url = "https://netorgft15862178.sharepoint.com/sites/Memo/_layouts/15/listforms.aspx?cid=MzRhNTgwNTAtNjRkOC00NmRkLTkzMmEtMWU1MTM2YmVhOTBk&nav=MWFlMTdkMjYtMjZlZC00NjY3LTg1ZjUtYTJlMzlmNTNiODY0"
     return redirect(url)
+
+def career_page(request):
+    return render(request, "core/career.html")

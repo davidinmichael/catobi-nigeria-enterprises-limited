@@ -28,6 +28,7 @@ urlpatterns = [
     path("freight/", include("freight.urls")),
     path("admin-space/account/", include("account.urls")),
     path("internal-memo/", views.memo_redirect, name="memo_redirect"),
+    path("career/", views.career_page, name="career_page"),
 ]
 
 if settings.DEBUG:
