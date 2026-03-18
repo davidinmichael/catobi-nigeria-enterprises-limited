@@ -46,39 +46,42 @@
           <a href="{% url 'services' 'valve' %}" class="dropdown-item"
             >Valve Procurement and Maintenance</a
           >
-          <a href="{% url 'services' 'pipeline' %}" class="dropdown-item">Pipeline Services</a>
-          <a href="{% url 'services' 'training' %}" class="dropdown-item">Training Services</a>
+          <a href="{% url 'services' 'pipeline' %}" class="dropdown-item"
+            >Pipeline Services</a
+          >
+          <a href="{% url 'services' 'training' %}" class="dropdown-item"
+            >Training Services</a
+          >
           <a href="{% url 'services' 'freight' %}" class="dropdown-item"
             >Freight Forwarding Services</a
           >
         </div>
       </div>
-      <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
-          >Equipments</a
-        >
-        <div class="dropdown-menu fade-up m-0">
-          <a href="{% url 'sandblast' %}" class="dropdown-item"
-            >Sand Blasting Machine</a
-          >
-        </div>
-      </div>
+
       <div class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
           >Facilities</a
         >
         <div class="dropdown-menu fade-up m-0">
-          <a href="{% url 'facility' 'testing' %}" class="dropdown-item">Testing Facility</a>
-          <a href="{% url 'facility' 'assembly' %}" class="dropdown-item">Valve Assembly</a>
+          <a href="{% url 'sandblast' %}" class="dropdown-item"
+            >Sand Blasting Machine</a
+          >
+          <a href="{% url 'facility' 'testing' %}" class="dropdown-item"
+            >Testing Facility</a
+          >
+          <a href="{% url 'facility' 'assembly' %}" class="dropdown-item"
+            >Valve Assembly</a
+          >
         </div>
       </div>
       <a href="{% url 'projects' %}" class="nav-item nav-link">Projects</a>
-      <!-- <a href="https://freight.catobi.com/" target="_blank" class="nav-item nav-link">Order Tracking</a> -->
+      <a href="{% url 'career_page' %}" class="nav-item nav-link">Career</a>
       <a href="{% url 'freight' %}" class="nav-item nav-link">Order Tracking</a>
       <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
-      <a href="{% url 'career_page' %}" class="nav-item nav-link">Career</a>
     </div>
-    <a href="{% url 'quote' %}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
+    <a
+      href="{% url 'quote' %}"
+      class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
       >Get A Quote<i class="fa fa-arrow-right ms-3"></i
     ></a>
   </div>
