@@ -13,6 +13,7 @@ class Shipment(models.Model):
     tracking_number = models.CharField(max_length=50, unique=True, blank=True)
     purchase_order = models.CharField(max_length=50, unique=True, blank=True)
     waybill_number = models.CharField(max_length=50, unique=True, blank=True)
+    shipment_id = models.CharField(max_length=50, unique=True, blank=True, null=True)
     carrier = models.CharField(max_length=50, null=True, blank=True)
     origin = models.CharField(max_length=100, blank=True, null=True)
     destination = models.CharField(max_length=100, blank=True, null=True)
@@ -40,21 +41,21 @@ class Shipment(models.Model):
         else:
             self.tracking_number = self.tracking_number.upper()
 
-        if not self.purchase_order:
-            purchase_order = f"CNEL{generate_purchase_order()}"
-            while Shipment.objects.filter(purchase_order=purchase_order).exists():
-                purchase_order = f"CNEL{generate_purchase_order()}"
-            self.purchase_order = purchase_order.upper()
-        else:
-            self.purchase_order = self.purchase_order.upper()
+        # if not self.purchase_order:
+        #     purchase_order = f"CNEL{generate_purchase_order()}"
+        #     while Shipment.objects.filter(purchase_order=purchase_order).exists():
+        #         purchase_order = f"CNEL{generate_purchase_order()}"
+        #     self.purchase_order = purchase_order.upper()
+        # else:
+        #     self.purchase_order = self.purchase_order.upper()
 
-        if not self.waybill_number:
-            waybill_number = f"CNEL{generate_waybill_number()}"
-            while Shipment.objects.filter(waybill_number=waybill_number).exists():
-                tracking = f"CNEL{generate_waybill_number()}"
-            self.waybill_number = waybill_number.upper()
-        else:
-            self.waybill_number = self.waybill_number.upper()
+        # if not self.waybill_number:
+        #     waybill_number = f"CNEL{generate_waybill_number()}"
+        #     while Shipment.objects.filter(waybill_number=waybill_number).exists():
+        #         tracking = f"CNEL{generate_waybill_number()}"
+        #     self.waybill_number = waybill_number.upper()
+        # else:
+        #     self.waybill_number = self.waybill_number.upper()
 
         super().save(*args, **kwargs)
 

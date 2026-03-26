@@ -11,6 +11,7 @@ class ShipmentForm(forms.ModelForm):
             "client_email",
             "purchase_order",
             "waybill_number",
+            "shipment_id",
             "carrier",
             "origin",
             "destination",
