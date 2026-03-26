@@ -11,6 +11,7 @@
     <thead>
       <tr>
         <th>Tracking #</th>
+        <th>Purchase Order</th>
         <th>Client</th>
         <th>Carrier</th>
         <th>Status</th>
@@ -24,6 +25,7 @@
       {% for shipment in shipments %}
       <tr>
         <td>{{ shipment.tracking_number }}</td>
+        <td>{{ shipment.purchase_order }}</td>
         <td>{{ shipment.client }}</td>
         <td>{{ shipment.carrier }}</td>
         <td>{{ shipment.status }}</td>
