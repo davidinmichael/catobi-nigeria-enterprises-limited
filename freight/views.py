@@ -42,7 +42,8 @@ class CreateShipment(View):
             }
             template = render_to_string("freight/shipment_email.html", context)
             print("Calling email function")
-            send_email(email, "Catobi Freight: Shipment Status", template)
+            email_subject = f"{shipment.mode_of_transport} {shipment.shipment_id} PO: {shipment.purchase_order}"
+            send_email(email, email_subject, template)
             messages.success(request, "Shipment successfully added!")
             return redirect("shipment_details", pk=shipment.pk)
         messages.error(request, "Error! Confirm the details and try again.")

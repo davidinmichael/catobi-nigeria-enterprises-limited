@@ -15,6 +15,7 @@ class ShipmentForm(forms.ModelForm):
             "carrier",
             "origin",
             "destination",
+            "mode_of_transport",
             "status",
             "last_location",
             "estimated_delivery",

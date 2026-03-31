@@ -1,5 +1,6 @@
 from django.db import models
 
+from .choices import ModeOfTransport
 from .utils import (
     generate_purchase_order,
     generate_tracking_number,
@@ -17,6 +18,9 @@ class Shipment(models.Model):
     carrier = models.CharField(max_length=50, null=True, blank=True)
     origin = models.CharField(max_length=100, blank=True, null=True)
     destination = models.CharField(max_length=100, blank=True, null=True)
+    mode_of_transport = models.CharField(
+        max_length=50, choices=ModeOfTransport.choices, default=ModeOfTransport.PENDING
+    )
     status = models.CharField(
         max_length=100, blank=True, null=True
     )  # e.g., "In Transit", "Delivered"
