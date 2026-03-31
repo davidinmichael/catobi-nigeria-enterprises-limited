@@ -97,6 +97,25 @@
       />
     </div>
 
+    
+    <div class="shipment-form-group">
+      <label class="shipment-label" for="mode_of_transport"
+        >Mode of Transport</label
+      >
+      <select
+        class="shipment-input"
+        id="mode_of_transport"
+        name="mode_of_transport"
+        required
+      >
+        <option value="{{shipment.mode_of_transport}}" disabled selected>Select Mode of Transport</option>
+        <option value="Sea Freight">Sea Freight</option>
+        <option value="Air Freight">Air Freight</option>
+        <option value="Courier">Courier</option>
+      </select>
+    </div>
+
+
     <div class="shipment-form-group">
       <label class="shipment-label" for="status">Status</label>
       <input
