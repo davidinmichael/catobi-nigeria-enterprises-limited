@@ -80,6 +80,26 @@
                     <td
                       style="padding: 8px 0; color: #117554; font-weight: bold"
                     >
+                      Location:
+                    </td>
+                    <td style="padding: 8px 0">
+                      {{ shipment.last_location|default:"-" }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="padding: 8px 0; color: #117554; font-weight: bold"
+                    >
+                      Status:
+                    </td>
+                    <td style="padding: 8px 0">
+                      {{ shipment.status|default:"Pending" }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="padding: 8px 0; color: #117554; font-weight: bold"
+                    >
                       Purchase Order:
                     </td>
                     <td style="padding: 8px 0">
@@ -146,16 +166,7 @@
                       {{ shipment.mode_of_transport|default:"-" }}
                     </td>
                   </tr>
-                  <tr>
-                    <td
-                      style="padding: 8px 0; color: #117554; font-weight: bold"
-                    >
-                      Status:
-                    </td>
-                    <td style="padding: 8px 0">
-                      {{ shipment.status|default:"Pending" }}
-                    </td>
-                  </tr>
+                  
                   <tr>
                     <td
                       style="padding: 8px 0; color: #117554; font-weight: bold"
@@ -166,16 +177,7 @@
                       {{ shipment.estimated_delivery|date:"F j, Y"|default:"TBD" }}
                     </td>
                   </tr>
-                  <tr>
-                    <td
-                      style="padding: 8px 0; color: #117554; font-weight: bold"
-                    >
-                      Location:
-                    </td>
-                    <td style="padding: 8px 0">
-                      {{ shipment.last_location|default:"-" }}
-                    </td>
-                  </tr>
+                  
                 </table>
 
                 <div style="text-align: center; margin: 30px 0">
