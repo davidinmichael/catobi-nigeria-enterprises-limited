@@ -100,6 +100,16 @@
                     <td
                       style="padding: 8px 0; color: #117554; font-weight: bold"
                     >
+                      Shipment ID:
+                    </td>
+                    <td style="padding: 8px 0">
+                      {{ shipment.shipment_id }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="padding: 8px 0; color: #117554; font-weight: bold"
+                    >
                       Carrier:
                     </td>
                     <td style="padding: 8px 0">
@@ -124,6 +134,16 @@
                     </td>
                     <td style="padding: 8px 0">
                       {{ shipment.destination|default:"-" }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="padding: 8px 0; color: #117554; font-weight: bold"
+                    >
+                      MOT:
+                    </td>
+                    <td style="padding: 8px 0">
+                      {{ shipment.mode_of_transport|default:"-" }}
                     </td>
                   </tr>
                   <tr>
@@ -203,5 +223,4 @@
     </table>
   </body>
 
-e1112 </html>
-2
+</html>

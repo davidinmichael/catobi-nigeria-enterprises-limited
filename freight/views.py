@@ -84,8 +84,9 @@ def shipment_detail(request, pk):
                 "shipment": shipment,
                 "url": f"{BASE_URL}/freight/track-courier/?tracking_number={shipment.tracking_number}",
             }
+            email_subject = f"{shipment.mode_of_transport} {shipment.shipment_id} PO: {shipment.purchase_order}"
             template = render_to_string("freight/shipment_update.html", context)
-            send_email(email, "Catobi Freight: Shipment Update", template)
+            send_email(email, email_subject, template)
 
             return redirect("shipment_details", pk=shipment.pk)
     else:
